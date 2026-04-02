@@ -1,0 +1,5169 @@
+{
+  "version": "2.10",
+  "children": [
+    {
+      "type": "frame",
+      "id": "YX9TS",
+      "x": 0,
+      "y": 0,
+      "name": "Kost Website",
+      "width": 1440,
+      "fill": "$surface-primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "wowxb",
+          "name": "Hero Section",
+          "metadata": {
+            "type": "unsplash",
+            "username": "shot_ed",
+            "link": "https://unsplash.com/@shot_ed",
+            "author": "shot ed"
+          },
+          "clip": true,
+          "width": "fill_container",
+          "height": 700,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1668005999442-2b912d4afbd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDEzOTR8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          },
+          "layout": "none",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "xmNcF",
+              "x": 0,
+              "y": 0,
+              "name": "overlay",
+              "fill": "#2D292690",
+              "width": 1440,
+              "height": 700
+            },
+            {
+              "type": "frame",
+              "id": "JsPuv",
+              "x": 0,
+              "y": 0,
+              "name": "content",
+              "width": 1440,
+              "height": 700,
+              "layout": "vertical",
+              "padding": [
+                20,
+                60
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "GFYOv",
+                  "name": "navbar",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Onp1Z",
+                      "name": "logo",
+                      "fill": "$fg-inverse",
+                      "content": "KostKu",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 26,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "HAKyj",
+                      "name": "navLinks",
+                      "gap": 32,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dfwIo",
+                          "fill": "$fg-inverse",
+                          "content": "Rooms",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "2yyCl",
+                          "fill": "$fg-inverse",
+                          "content": "Facilities",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "AqcS4",
+                          "fill": "$fg-inverse",
+                          "content": "Gallery",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "UzKsl",
+                          "fill": "$fg-inverse",
+                          "content": "Contact",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wRbyu",
+                  "name": "heroBody",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "LkeJM",
+                      "name": "headline",
+                      "fill": "$fg-inverse",
+                      "textGrowth": "fixed-width",
+                      "width": 800,
+                      "content": "Temukan Kost Nyaman untuk Hunian Anda",
+                      "textAlign": "center",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 56,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "QqHRp",
+                      "name": "subtitle",
+                      "fill": "#F5F2E9CC",
+                      "textGrowth": "fixed-width",
+                      "width": 600,
+                      "content": "Kost modern dengan fasilitas lengkap, lokasi strategis, dan harga terjangkau.",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "4bmCm",
+                      "name": "ctaBtn",
+                      "fill": "$accent-primary",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        16,
+                        36
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "796gz",
+                          "fill": "$fg-inverse",
+                          "content": "Lihat Kamar",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "gfi0t",
+          "name": "Facilities Section",
+          "width": "fill_container",
+          "fill": "$surface-primary",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            80,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "dNOUQ",
+              "name": "hdr",
+              "layout": "vertical",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "8vox0",
+                  "fill": "$fg-primary",
+                  "content": "Fasilitas Lengkap",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 40,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "EJt25",
+                  "fill": "$fg-secondary",
+                  "content": "Semua yang Anda butuhkan untuk kenyamanan tinggal.",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "WwKfd",
+              "name": "grid",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ozyrh",
+                  "name": "r1",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "p5QPh",
+                      "name": "c1",
+                      "width": 700,
+                      "height": 200,
+                      "fill": "$surface-secondary",
+                      "cornerRadius": "$rounded-2xl",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "AdU99",
+                          "width": 32,
+                          "height": 32,
+                          "iconFontName": "wifi",
+                          "iconFontFamily": "lucide",
+                          "fill": "$accent-primary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "t33qa",
+                          "fill": "$fg-primary",
+                          "content": "WiFi Cepat",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "QYSqN",
+                          "fill": "$fg-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Internet berkecepatan tinggi tersedia di seluruh area kost.",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YiVdr",
+                      "name": "c2",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": "$surface-secondary",
+                      "cornerRadius": "$rounded-2xl",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "RVhd0",
+                          "width": 32,
+                          "height": 32,
+                          "iconFontName": "wind",
+                          "iconFontFamily": "lucide",
+                          "fill": "$accent-primary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ulXYs",
+                          "fill": "$fg-primary",
+                          "content": "AC & Kipas Angin",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "CT05t",
+                          "fill": "$fg-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Setiap kamar dilengkapi pendingin ruangan untuk kenyamanan Anda.",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZRwFA",
+                  "name": "r2",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "8bDkX",
+                      "name": "c3",
+                      "width": "fill_container",
+                      "height": 180,
+                      "fill": "$surface-secondary",
+                      "cornerRadius": "$rounded-2xl",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "TpTdJ",
+                          "width": 32,
+                          "height": 32,
+                          "iconFontName": "car",
+                          "iconFontFamily": "lucide",
+                          "fill": "$accent-primary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "A8nrz",
+                          "fill": "$fg-primary",
+                          "content": "Parkir Luas",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "yCFW6",
+                          "fill": "$fg-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Area parkir yang luas untuk motor dan mobil.",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "f5ieb",
+                      "name": "c4",
+                      "width": "fill_container",
+                      "height": 180,
+                      "fill": "$surface-secondary",
+                      "cornerRadius": "$rounded-2xl",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "KpLw4",
+                          "width": 32,
+                          "height": 32,
+                          "iconFontName": "shirt",
+                          "iconFontFamily": "lucide",
+                          "fill": "$accent-primary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "wId9g",
+                          "fill": "$fg-primary",
+                          "content": "Laundry",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dVVjx",
+                          "fill": "$fg-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Layanan laundry tersedia untuk penghuni kost.",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "IRKyn",
+                      "name": "c5",
+                      "width": "fill_container",
+                      "height": 180,
+                      "fill": "$surface-secondary",
+                      "cornerRadius": "$rounded-2xl",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "NbdQf",
+                          "width": 32,
+                          "height": 32,
+                          "iconFontName": "cooking-pot",
+                          "iconFontFamily": "lucide",
+                          "fill": "$accent-primary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "1dCOP",
+                          "fill": "$fg-primary",
+                          "content": "Dapur Bersama",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "qUUM2",
+                          "fill": "$fg-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Dapur bersih dan lengkap untuk memasak.",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vl7Vl",
+                  "name": "c6",
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": "$surface-secondary",
+                  "cornerRadius": "$rounded-2xl",
+                  "gap": 16,
+                  "padding": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "nxdFn",
+                      "width": 40,
+                      "height": 40,
+                      "iconFontName": "shield-check",
+                      "iconFontFamily": "lucide",
+                      "fill": "$accent-primary"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "q9uwt",
+                      "name": "wrap6",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ZsaNV",
+                          "fill": "$fg-primary",
+                          "content": "Keamanan 24 Jam",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "FCTLt",
+                          "fill": "$fg-secondary",
+                          "content": "Sistem keamanan dan CCTV aktif sepanjang hari untuk ketenangan Anda.",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Mbr2S",
+          "name": "Room Types Section",
+          "width": "fill_container",
+          "fill": "$surface-secondary",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            80,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "6cI2D",
+              "name": "rh",
+              "layout": "vertical",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "QCu4l",
+                  "fill": "$fg-primary",
+                  "content": "Pilihan Kamar",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 40,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "p3GQv",
+                  "fill": "$fg-secondary",
+                  "content": "Tersedia berbagai tipe kamar sesuai kebutuhan Anda.",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ZJ0lw",
+              "name": "cr",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "G8cvs",
+                  "name": "k1",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "$surface-primary",
+                  "cornerRadius": "$rounded-2xl",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#0000000a",
+                    "offset": {
+                      "x": 0,
+                      "y": 1
+                    },
+                    "blur": 2
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Mtm5S",
+                      "name": "im1",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "kapil4167",
+                        "link": "https://unsplash.com/@kapil4167",
+                        "author": "Kapil Rai"
+                      },
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": 220,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1645237455598-e8f02d706a4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE1Njd8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "NCRUE",
+                      "name": "cn1",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "PN0Z8",
+                          "fill": "$fg-primary",
+                          "content": "Kamar Standard",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "bKJrO",
+                          "fill": "$accent-primary",
+                          "content": "Rp 1.500.000/bulan",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 22,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "u5Mee",
+                          "fill": "$surface-secondary",
+                          "width": "fill_container",
+                          "height": 1
+                        },
+                        {
+                          "type": "frame",
+                          "id": "iyswb",
+                          "name": "a1",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "bezkJ",
+                              "fill": "$fg-secondary",
+                              "content": "✓  Kasur & Lemari",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "4lAAT",
+                              "fill": "$fg-secondary",
+                              "content": "✓  WiFi Gratis",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "1PmjC",
+                              "fill": "$fg-secondary",
+                              "content": "✓  Kamar Mandi Dalam",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ZeohW",
+                              "fill": "$fg-secondary",
+                              "content": "✓  Parkir Motor",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "hhahH",
+                          "name": "b1",
+                          "width": "fill_container",
+                          "fill": "$surface-inverse",
+                          "cornerRadius": "$rounded-lg",
+                          "padding": [
+                            14,
+                            0
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "cnCxX",
+                              "fill": "$fg-inverse",
+                              "content": "Pesan Sekarang",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nEatL",
+                  "name": "k2",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "$surface-primary",
+                  "cornerRadius": "$rounded-2xl",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#0000000a",
+                    "offset": {
+                      "x": 0,
+                      "y": 1
+                    },
+                    "blur": 2
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "FKawG",
+                      "name": "im2",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "francotheshooter",
+                        "link": "https://unsplash.com/@francotheshooter",
+                        "author": "Franco Debartolo"
+                      },
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": 220,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1771287491132-4954b32210d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE1Njl8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Ddwn0",
+                      "name": "cn2",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "VZgAM",
+                          "fill": "$fg-primary",
+                          "content": "Kamar Deluxe",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "xnpVH",
+                          "fill": "$accent-primary",
+                          "content": "Rp 2.500.000/bulan",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 22,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "n1fo4",
+                          "fill": "$surface-secondary",
+                          "width": "fill_container",
+                          "height": 1
+                        },
+                        {
+                          "type": "frame",
+                          "id": "jY0h0",
+                          "name": "a2",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "4T8ru",
+                              "fill": "$fg-secondary",
+                              "content": "✓  Kasur Queen Size",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "JArqJ",
+                              "fill": "$fg-secondary",
+                              "content": "✓  WiFi Gratis",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "p8bo2",
+                              "fill": "$fg-secondary",
+                              "content": "✓  AC",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Z2kKS",
+                              "fill": "$fg-secondary",
+                              "content": "✓  Kamar Mandi Dalam",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "nGFnj",
+                          "name": "b2",
+                          "width": "fill_container",
+                          "fill": "$surface-inverse",
+                          "cornerRadius": "$rounded-lg",
+                          "padding": [
+                            14,
+                            0
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "mfRV1",
+                              "fill": "$fg-inverse",
+                              "content": "Pesan Sekarang",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wdgD5",
+                  "name": "k3",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "$surface-primary",
+                  "cornerRadius": "$rounded-2xl",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#0000000a",
+                    "offset": {
+                      "x": 0,
+                      "y": 1
+                    },
+                    "blur": 2
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "0iwup",
+                      "name": "im3",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "grant_durr",
+                        "link": "https://unsplash.com/@grant_durr",
+                        "author": "Grant Durr"
+                      },
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": 220,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1719749938126-2f469f5f9422?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE1NzB8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "q917u",
+                      "name": "cn3",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "TtPwd",
+                          "fill": "$fg-primary",
+                          "content": "Kamar Premium",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "nITCp",
+                          "fill": "$accent-primary",
+                          "content": "Rp 3.500.000/bulan",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 22,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "xTt9v",
+                          "fill": "$surface-secondary",
+                          "width": "fill_container",
+                          "height": 1
+                        },
+                        {
+                          "type": "frame",
+                          "id": "voxN3",
+                          "name": "a3",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "QF5A1",
+                              "fill": "$fg-secondary",
+                              "content": "✓  Kasur King Size",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "9uKLP",
+                              "fill": "$fg-secondary",
+                              "content": "✓  WiFi & AC",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "tXKJD",
+                              "fill": "$fg-secondary",
+                              "content": "✓  KM Dalam + Water Heater",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "vbjcj",
+                              "fill": "$fg-secondary",
+                              "content": "✓  Balkon Pribadi",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dmUAk",
+                          "name": "b3",
+                          "width": "fill_container",
+                          "fill": "$surface-inverse",
+                          "cornerRadius": "$rounded-lg",
+                          "padding": [
+                            14,
+                            0
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "rqQbR",
+                              "fill": "$fg-inverse",
+                              "content": "Pesan Sekarang",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "itVy5",
+          "name": "Gallery Section",
+          "width": "fill_container",
+          "fill": "$surface-primary",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            80,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "rIVeH",
+              "name": "galleryTag",
+              "fill": "$surface-secondary",
+              "cornerRadius": "$rounded-full",
+              "padding": [
+                8,
+                20
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ASRO1",
+                  "fill": "$accent-primary",
+                  "content": "Galeri",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "flCYT",
+              "name": "galleryTitle",
+              "fill": "$fg-primary",
+              "content": "Lihat Suasana Kost Kami",
+              "textAlign": "center",
+              "fontFamily": "Playfair Display",
+              "fontSize": 40,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "rzwv1",
+              "name": "gallerySubtitle",
+              "fill": "$fg-secondary",
+              "textGrowth": "fixed-width",
+              "width": 500,
+              "content": "Intip kenyamanan kost kami melalui foto dan video tur berikut.",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "KDved",
+              "name": "Gallery Grid",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "9utZE",
+                  "name": "Left Column",
+                  "width": "fill_container",
+                  "height": 500,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "f7JKf",
+                      "name": "Gallery Image 1",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "itsbilalmn",
+                        "link": "https://unsplash.com/@itsbilalmn",
+                        "author": "Bilal Mansuri"
+                      },
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1663811398994-0b91f717d1c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDEyMjR8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": "$rounded-2xl",
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "rMMmK",
+                          "name": "overlay1",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "fill": "#00000040",
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "I828j",
+                              "name": "playBtn1",
+                              "width": 72,
+                              "height": 72,
+                              "fill": "#FFFFFFDD",
+                              "cornerRadius": "$rounded-full",
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon_font",
+                                  "id": "b5zVW",
+                                  "name": "playIcon1",
+                                  "width": 32,
+                                  "height": 32,
+                                  "iconFontName": "play",
+                                  "iconFontFamily": "lucide",
+                                  "fill": "$fg-primary"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "VKULd",
+                              "name": "videoLabel1",
+                              "fill": "#FFFFFFEE",
+                              "content": "Video Tur Kamar",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mbPUa",
+                  "name": "Right Column",
+                  "width": "fill_container",
+                  "height": 500,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kLPBZ",
+                      "name": "Top Row",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "a8LQY",
+                          "name": "Gallery Image 2",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "priscilladupreez",
+                            "link": "https://unsplash.com/@priscilladupreez",
+                            "author": "Priscilla Du Preez 🇨🇦"
+                          },
+                          "clip": true,
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1694813646556-0c422fbc979d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDEyMjV8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": "$rounded-2xl"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "j2M8x",
+                          "name": "Gallery Image 3",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "lisaanna195",
+                            "link": "https://unsplash.com/@lisaanna195",
+                            "author": "Lisa Anna"
+                          },
+                          "clip": true,
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1722606509802-54f0bf5335bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDEyMjZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": "$rounded-2xl"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "VLFpR",
+                      "name": "Bottom Row",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "1MTS0",
+                          "name": "Gallery Image 4",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "sirole",
+                            "link": "https://unsplash.com/@sirole",
+                            "author": "Kirsten Miles"
+                          },
+                          "clip": true,
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1768080315797-892a70ce05ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDEyMjZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": "$rounded-2xl",
+                          "layout": "vertical",
+                          "padding": 16,
+                          "justifyContent": "end",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "HHgMv",
+                              "name": "overlay2",
+                              "fill": "#000000AA",
+                              "cornerRadius": "$rounded-full",
+                              "gap": 8,
+                              "padding": [
+                                8,
+                                14
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon_font",
+                                  "id": "DJsgt",
+                                  "name": "playIcon2",
+                                  "width": 16,
+                                  "height": 16,
+                                  "iconFontName": "play",
+                                  "iconFontFamily": "lucide",
+                                  "fill": "#FFFFFFEE"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "vpiQn",
+                                  "name": "videoTag2",
+                                  "fill": "#FFFFFFEE",
+                                  "content": "Video",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "vHxGE",
+                          "name": "Gallery Image 5",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "timbuening",
+                            "link": "https://unsplash.com/@timbuening",
+                            "author": "Tim Büning"
+                          },
+                          "clip": true,
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "fill": [
+                            "$surface-inverse",
+                            {
+                              "type": "image",
+                              "opacity": 0.3,
+                              "enabled": true,
+                              "url": "https://images.unsplash.com/photo-1770843244931-9e6d4d1055be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDEyMjd8&ixlib=rb-4.1.0&q=80&w=1080",
+                              "mode": "fill"
+                            }
+                          ],
+                          "cornerRadius": "$rounded-2xl",
+                          "layout": "vertical",
+                          "gap": 8,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Q3yCJ",
+                              "name": "countText",
+                              "fill": "$fg-inverse",
+                              "content": "+20",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 40,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ue9bI",
+                              "name": "countLabel",
+                              "fill": "#FFFFFFBB",
+                              "content": "Foto & Video",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wRdST",
+              "name": "See All Button",
+              "fill": "$surface-secondary",
+              "cornerRadius": "$rounded-full",
+              "gap": 8,
+              "padding": [
+                14,
+                32
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "MvyJT",
+                  "name": "seeAllIcon",
+                  "width": 18,
+                  "height": 18,
+                  "iconFontName": "images",
+                  "iconFontFamily": "lucide",
+                  "fill": "$fg-secondary"
+                },
+                {
+                  "type": "text",
+                  "id": "v1rTY",
+                  "name": "seeAllText",
+                  "fill": "$fg-secondary",
+                  "content": "Lihat Semua Foto & Video",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "nZa1G",
+                  "name": "seeAllArrow",
+                  "width": 16,
+                  "height": 16,
+                  "iconFontName": "arrow-right",
+                  "iconFontFamily": "lucide",
+                  "fill": "$fg-secondary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "94YRY",
+          "name": "Testimonials Section",
+          "width": "fill_container",
+          "fill": "$surface-secondary",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            80,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "BNT2g",
+              "name": "testTag",
+              "fill": "$surface-primary",
+              "cornerRadius": "$rounded-full",
+              "padding": [
+                8,
+                20
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "kTm3X",
+                  "fill": "$accent-primary",
+                  "content": "Testimoni",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "bxcvU",
+              "name": "testTitle",
+              "fill": "$fg-primary",
+              "content": "Apa Kata Penghuni Kami",
+              "textAlign": "center",
+              "fontFamily": "Playfair Display",
+              "fontSize": 40,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "tgZ4P",
+              "name": "testSubtitle",
+              "fill": "$fg-secondary",
+              "textGrowth": "fixed-width",
+              "width": 500,
+              "content": "Dengarkan pengalaman langsung dari para penghuni kost kami.",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "I4H2h",
+              "name": "Testimonial Cards",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "XYK6D",
+                  "name": "Testimonial 1",
+                  "width": "fill_container",
+                  "fill": "$surface-primary",
+                  "cornerRadius": "$rounded-2xl",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#0000000a",
+                    "offset": {
+                      "x": 0,
+                      "y": 1
+                    },
+                    "blur": 2
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DvU2a",
+                      "name": "stars1",
+                      "fill": "$accent-primary",
+                      "content": "★★★★★",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "BqWda",
+                      "name": "quote1",
+                      "fill": "$fg-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "\"Kost ini sangat bersih dan nyaman. WiFi kencang, cocok untuk kerja remote. Ibu kostnya juga sangat ramah dan membantu.\"",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "Qkygk",
+                      "name": "divider1",
+                      "fill": "$surface-secondary",
+                      "width": "fill_container",
+                      "height": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hitbY",
+                      "name": "profile1",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "A3sjm",
+                          "name": "newAvatar1",
+                          "width": 44,
+                          "height": 44,
+                          "fill": "$accent-primary",
+                          "cornerRadius": "$rounded-full",
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "X4hut",
+                              "x": 15,
+                              "y": 11,
+                              "fill": "$fg-inverse",
+                              "content": "A",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "MPvzM",
+                          "name": "info1",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "TZhuk",
+                              "name": "name1",
+                              "fill": "$fg-primary",
+                              "content": "Aisyah Putri",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "UDdpx",
+                              "name": "role1",
+                              "fill": "$fg-muted",
+                              "content": "Mahasiswi, 1 tahun tinggal",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RtEz2",
+                  "name": "Testimonial 2",
+                  "width": "fill_container",
+                  "fill": "$surface-primary",
+                  "cornerRadius": "$rounded-2xl",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#0000000a",
+                    "offset": {
+                      "x": 0,
+                      "y": 1
+                    },
+                    "blur": 2
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "9AXEp",
+                      "name": "stars2",
+                      "fill": "$accent-primary",
+                      "content": "★★★★★",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Do7kE",
+                      "name": "quote2",
+                      "fill": "$fg-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "\"Lokasi strategis dekat kampus dan pusat kota. Fasilitas lengkap dan harga sangat terjangkau dibanding kost lain.\"",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "xXHKA",
+                      "name": "divider2",
+                      "fill": "$surface-secondary",
+                      "width": "fill_container",
+                      "height": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "x5vri",
+                      "name": "profile2",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "IdiHw",
+                          "name": "avatar2",
+                          "width": 44,
+                          "height": 44,
+                          "fill": "$accent-primary",
+                          "cornerRadius": "$rounded-full",
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "sHJ3W",
+                              "x": 15,
+                              "y": 11,
+                              "name": "avatarInit2",
+                              "fill": "$fg-inverse",
+                              "content": "B",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "K2gJh",
+                          "name": "info2",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Oux9R",
+                              "name": "name2",
+                              "fill": "$fg-primary",
+                              "content": "Budi Santoso",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "5DJlr",
+                              "name": "role2",
+                              "fill": "$fg-muted",
+                              "content": "Karyawan, 2 tahun tinggal",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ErBUl",
+                  "name": "Testimonial 3",
+                  "width": "fill_container",
+                  "fill": "$surface-primary",
+                  "cornerRadius": "$rounded-2xl",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#0000000a",
+                    "offset": {
+                      "x": 0,
+                      "y": 1
+                    },
+                    "blur": 2
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "4swH8",
+                      "name": "stars3",
+                      "fill": "$accent-primary",
+                      "content": "★★★★★",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "K3rEL",
+                      "name": "quote3",
+                      "fill": "$fg-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "\"Keamanan 24 jam membuat saya merasa aman. Parkir luas dan dapur bersama selalu bersih. Sangat recommended!\"",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "goiju",
+                      "name": "divider3",
+                      "fill": "$surface-secondary",
+                      "width": "fill_container",
+                      "height": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Rsdce",
+                      "name": "profile3",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "aLQJ2",
+                          "name": "avatar3",
+                          "width": 44,
+                          "height": 44,
+                          "fill": "$accent-primary",
+                          "cornerRadius": "$rounded-full",
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "WNN2X",
+                              "x": 14,
+                              "y": 11,
+                              "name": "avatarInit3",
+                              "fill": "$fg-inverse",
+                              "content": "C",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "lrYXS",
+                          "name": "info3",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "McCKu",
+                              "name": "name3",
+                              "fill": "$fg-primary",
+                              "content": "Citra Dewi",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "RTWpR",
+                              "name": "role3",
+                              "fill": "$fg-muted",
+                              "content": "Profesional, 6 bulan tinggal",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "L01aF",
+          "name": "Contact CTA Section",
+          "width": "fill_container",
+          "fill": "$surface-inverse",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            80,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "4QilQ",
+              "name": "ctaTag",
+              "fill": "#3D3530FF",
+              "cornerRadius": "$rounded-full",
+              "padding": [
+                8,
+                20
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jMz6T",
+                  "fill": "$accent-primary",
+                  "content": "Hubungi Kami",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "6AEta",
+              "name": "ctaTitle",
+              "fill": "$fg-inverse",
+              "content": "Siap Menemukan Kost Impian Anda?",
+              "textAlign": "center",
+              "fontFamily": "Playfair Display",
+              "fontSize": 44,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "MJBqk",
+              "name": "ctaDesc",
+              "fill": "#8C8782FF",
+              "textGrowth": "fixed-width",
+              "width": 550,
+              "content": "Hubungi kami sekarang untuk informasi lebih lanjut atau jadwalkan kunjungan langsung ke lokasi kost kami.",
+              "lineHeight": 1.6,
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "RKFw5",
+              "name": "Contact Info Row",
+              "gap": 40,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "mi9Tm",
+                  "name": "phoneCard",
+                  "fill": "#3D3530FF",
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    24,
+                    32
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "apdGM",
+                      "name": "phoneIcon",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "phone",
+                      "iconFontFamily": "lucide",
+                      "fill": "$accent-primary"
+                    },
+                    {
+                      "type": "text",
+                      "id": "3EA4N",
+                      "name": "phoneLabel",
+                      "fill": "#8C8782FF",
+                      "content": "Telepon",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "qmoCu",
+                      "name": "phoneNum",
+                      "fill": "$fg-inverse",
+                      "content": "+62 812 3456 7890",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "2xqh3",
+                  "name": "waCard",
+                  "fill": "#3D3530FF",
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    24,
+                    32
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "p4EZv",
+                      "name": "waIcon",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "message-circle",
+                      "iconFontFamily": "lucide",
+                      "fill": "$accent-primary"
+                    },
+                    {
+                      "type": "text",
+                      "id": "GSGpu",
+                      "name": "waLabel",
+                      "fill": "#8C8782FF",
+                      "content": "WhatsApp",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "WmFjM",
+                      "name": "waNum",
+                      "fill": "$fg-inverse",
+                      "content": "+62 812 3456 7890",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qDok6",
+                  "name": "locCard",
+                  "fill": "#3D3530FF",
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    24,
+                    32
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "G5ekb",
+                      "name": "locIcon",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "map-pin",
+                      "iconFontFamily": "lucide",
+                      "fill": "$accent-primary"
+                    },
+                    {
+                      "type": "text",
+                      "id": "8wQaL",
+                      "name": "locLabel",
+                      "fill": "#8C8782FF",
+                      "content": "Lokasi",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zfVrH",
+                      "name": "locAddr",
+                      "fill": "$fg-inverse",
+                      "content": "Jl. Merdeka No. 45, Jakarta",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "8Y2Fq",
+              "name": "CTA Button",
+              "fill": "$accent-primary",
+              "cornerRadius": "$rounded-full",
+              "gap": 10,
+              "padding": [
+                16,
+                48
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "cSkQJ",
+                  "name": "ctaBtnIcon",
+                  "width": 20,
+                  "height": 20,
+                  "iconFontName": "message-circle",
+                  "iconFontFamily": "lucide",
+                  "fill": "$fg-inverse"
+                },
+                {
+                  "type": "text",
+                  "id": "vctFx",
+                  "name": "ctaBtnText",
+                  "fill": "$fg-inverse",
+                  "content": "Hubungi via WhatsApp",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "WiSyZ",
+          "name": "Footer Section",
+          "width": "fill_container",
+          "fill": "$surface-inverse",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            48,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "SWMRv",
+              "name": "Footer Top",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "a1GI3",
+                  "name": "footerBrand",
+                  "width": 300,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Ud016",
+                      "name": "brandName",
+                      "fill": "$fg-inverse",
+                      "content": "KostKu",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "3r0e1",
+                      "name": "brandDesc",
+                      "fill": "#8C8782FF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Kost modern dengan fasilitas lengkap untuk kenyamanan Anda. Lokasi strategis dan harga terjangkau.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "YdzL9",
+                  "name": "footerLinks",
+                  "gap": 80,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kAsGa",
+                      "name": "col1",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "OqhAM",
+                          "name": "col1Title",
+                          "fill": "$fg-inverse",
+                          "content": "Navigasi",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "MLnCC",
+                          "name": "col1L1",
+                          "fill": "#8C8782FF",
+                          "content": "Beranda",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "028AB",
+                          "name": "col1L2",
+                          "fill": "#8C8782FF",
+                          "content": "Kamar",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "APxPD",
+                          "name": "col1L3",
+                          "fill": "#8C8782FF",
+                          "content": "Fasilitas",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "zRaG4",
+                          "name": "col1L4",
+                          "fill": "#8C8782FF",
+                          "content": "Galeri",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "pjhOg",
+                      "name": "col2",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "SOPeH",
+                          "name": "col2Title",
+                          "fill": "$fg-inverse",
+                          "content": "Informasi",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dTbKJ",
+                          "name": "col2L1",
+                          "fill": "#8C8782FF",
+                          "content": "Tentang Kami",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "7tQIJ",
+                          "name": "col2L2",
+                          "fill": "#8C8782FF",
+                          "content": "Syarat & Ketentuan",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Rks2H",
+                          "name": "col2L3",
+                          "fill": "#8C8782FF",
+                          "content": "Kebijakan Privasi",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "09jJJ",
+                          "name": "col2L4",
+                          "fill": "#8C8782FF",
+                          "content": "FAQ",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "KkurC",
+                      "name": "col3",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "PFIUj",
+                          "name": "col3Title",
+                          "fill": "$fg-inverse",
+                          "content": "Kontak",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "9YTvN",
+                          "name": "col3L1",
+                          "fill": "#8C8782FF",
+                          "content": "+62 812 3456 7890",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "MlWlT",
+                          "name": "col3L2",
+                          "fill": "#8C8782FF",
+                          "content": "info@kostku.com",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "D3wft",
+                          "name": "col3L3",
+                          "fill": "#8C8782FF",
+                          "content": "Jl. Merdeka No. 45",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "l7iRi",
+                          "name": "col3L4",
+                          "fill": "#8C8782FF",
+                          "content": "Jakarta Selatan",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "PW5Fb",
+              "name": "footerDivider",
+              "fill": "#3D3530FF",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "7etZg",
+              "name": "Footer Bottom",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "670Py",
+                  "name": "copyright",
+                  "fill": "#8C8782FF",
+                  "content": "© 2026 KostKu. Hak cipta dilindungi.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "VfACT",
+                  "name": "socialRow",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "VJjpF",
+                      "name": "igIcon",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "instagram",
+                      "iconFontFamily": "lucide",
+                      "fill": "#8C8782FF"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "dIZPI",
+                      "name": "fbIcon",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "facebook",
+                      "iconFontFamily": "lucide",
+                      "fill": "#8C8782FF"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "qLAg0",
+                      "name": "twitterIcon",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "twitter",
+                      "iconFontFamily": "lucide",
+                      "fill": "#8C8782FF"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "9THYt",
+      "x": 1640,
+      "y": 0,
+      "name": "Gallery Page",
+      "width": 1440,
+      "fill": "$surface-primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "5dnoF",
+          "name": "Gallery Navbar",
+          "width": "fill_container",
+          "height": 72,
+          "fill": "$surface-primary",
+          "padding": [
+            0,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "8hVLt",
+              "name": "logo",
+              "fill": "$fg-primary",
+              "content": "KostKu",
+              "fontFamily": "Playfair Display",
+              "fontSize": 24,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "DxnF2",
+              "name": "navRight",
+              "gap": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "UOJWt",
+                  "name": "navLinks",
+                  "gap": 28,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "acxx1",
+                      "name": "link1",
+                      "fill": "$fg-secondary",
+                      "content": "Beranda",
+                      "fontFamily": "Inter",
+                      "fontSize": 15
+                    },
+                    {
+                      "type": "text",
+                      "id": "H0ewp",
+                      "name": "link2",
+                      "fill": "$fg-secondary",
+                      "content": "Kamar",
+                      "fontFamily": "Inter",
+                      "fontSize": 15
+                    },
+                    {
+                      "type": "text",
+                      "id": "piZmX",
+                      "name": "link3",
+                      "fill": "$fg-secondary",
+                      "content": "Fasilitas",
+                      "fontFamily": "Inter",
+                      "fontSize": 15
+                    },
+                    {
+                      "type": "text",
+                      "id": "0QEEl",
+                      "name": "link4",
+                      "fill": "$accent-primary",
+                      "content": "Galeri",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZJx0x",
+                      "name": "link5",
+                      "fill": "$fg-secondary",
+                      "content": "Kontak",
+                      "fontFamily": "Inter",
+                      "fontSize": 15
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "8ysOl",
+                  "name": "ctaBtn",
+                  "fill": "$accent-primary",
+                  "cornerRadius": "$rounded-full",
+                  "padding": [
+                    10,
+                    24
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MvfIC",
+                      "name": "ctaText",
+                      "fill": "$fg-inverse",
+                      "content": "Hubungi Kami",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "UUnJc",
+          "name": "Gallery Header",
+          "width": "fill_container",
+          "fill": "$surface-primary",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            60,
+            120,
+            40,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "SMNyA",
+              "name": "breadcrumb",
+              "fill": "$fg-muted",
+              "content": "Beranda  >  Galeri",
+              "fontFamily": "Inter",
+              "fontSize": 14
+            },
+            {
+              "type": "text",
+              "id": "O97Vi",
+              "name": "title",
+              "fill": "$fg-primary",
+              "content": "Galeri Foto & Video",
+              "fontFamily": "Playfair Display",
+              "fontSize": 48,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "T5Znw",
+              "name": "subtitle",
+              "fill": "$fg-secondary",
+              "textGrowth": "fixed-width",
+              "width": 640,
+              "content": "Jelajahi semua foto dan video tur kost kami untuk melihat kenyamanan yang kami tawarkan.",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 18
+            },
+            {
+              "type": "frame",
+              "id": "JbpJT",
+              "name": "tabsRow",
+              "gap": 12,
+              "padding": [
+                8,
+                0,
+                0,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "HqVee",
+                  "name": "tab1",
+                  "fill": "$accent-primary",
+                  "cornerRadius": "$rounded-full",
+                  "padding": [
+                    10,
+                    24
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "OCHst",
+                      "name": "tab1Text",
+                      "fill": "$fg-inverse",
+                      "content": "Semua",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "bYTnH",
+                  "name": "tab2",
+                  "fill": "$surface-secondary",
+                  "cornerRadius": "$rounded-full",
+                  "padding": [
+                    10,
+                    24
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "gxtbS",
+                      "name": "tab2Text",
+                      "fill": "$fg-secondary",
+                      "content": "Kamar",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZRB8q",
+                  "name": "tab3",
+                  "fill": "$surface-secondary",
+                  "cornerRadius": "$rounded-full",
+                  "padding": [
+                    10,
+                    24
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "d1wRJ",
+                      "name": "tab3Text",
+                      "fill": "$fg-secondary",
+                      "content": "Fasilitas",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "16W1f",
+                  "name": "tab4",
+                  "fill": "$surface-secondary",
+                  "cornerRadius": "$rounded-full",
+                  "padding": [
+                    10,
+                    24
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SsbJa",
+                      "name": "tab4Text",
+                      "fill": "$fg-secondary",
+                      "content": "Lingkungan",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rHOyc",
+                  "name": "tab5",
+                  "fill": "$surface-secondary",
+                  "cornerRadius": "$rounded-full",
+                  "padding": [
+                    10,
+                    24
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yiPkL",
+                      "name": "tab5Text",
+                      "fill": "$fg-secondary",
+                      "content": "Video",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "zJmUX",
+          "name": "Gallery Grid Section",
+          "width": "fill_container",
+          "fill": "$surface-primary",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            0,
+            120,
+            80,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "SpGa4",
+              "name": "Grid Row 1",
+              "width": "fill_container",
+              "height": 320,
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "gArVr",
+                  "name": "Kamar Standard",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "thanospal",
+                    "link": "https://unsplash.com/@thanospal",
+                    "author": "Thanos Pal"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1589271243958-d61e12b61b97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE4NjN8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "8q2F7",
+                      "name": "tag1",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        6,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "y4vmo",
+                          "fill": "#FFFFFFEE",
+                          "content": "Kamar Standard",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QcNZ3",
+                  "name": "Kamar Deluxe",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "anniespratt",
+                    "link": "https://unsplash.com/@anniespratt",
+                    "author": "Annie Spratt"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1517912191359-67659f8690a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE4NjR8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "KIYsK",
+                      "name": "tag2",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        6,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "9gYbj",
+                          "fill": "#FFFFFFEE",
+                          "content": "Kamar Deluxe",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vl5il",
+                  "name": "Kamar Premium",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "3dottawa",
+                    "link": "https://unsplash.com/@3dottawa",
+                    "author": "Point3D Commercial Imaging Ltd."
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1631049035113-4a68ecf80b1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE4NjV8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "pBOGW",
+                      "name": "tag3",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        6,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "QuZ9Z",
+                          "fill": "#FFFFFFEE",
+                          "content": "Kamar Premium",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "nxR9B",
+              "name": "Grid Row 2 - Video Feature",
+              "width": "fill_container",
+              "height": 380,
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "1TgZy",
+                  "name": "Video Tour Kamar",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "mattmoloney",
+                    "link": "https://unsplash.com/@mattmoloney",
+                    "author": "Matthew Moloney"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1622751050423-603a73f1d0bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE4ODZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Yyx7w",
+                      "name": "vidOverlay",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": "#00000040",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "XV8wF",
+                          "name": "playBtn",
+                          "width": 64,
+                          "height": 64,
+                          "fill": "#FFFFFFDD",
+                          "cornerRadius": "$rounded-full",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "8pYTs",
+                              "width": 28,
+                              "height": 28,
+                              "iconFontName": "play",
+                              "iconFontFamily": "lucide",
+                              "fill": "$fg-primary"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "rtGlw",
+                          "fill": "#FFFFFFEE",
+                          "content": "Video Tur Kamar Standard",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Tjuty",
+                          "fill": "#FFFFFF99",
+                          "content": "2:45",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "3WRWe",
+                  "name": "Tampak Depan",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "kinteria",
+                    "link": "https://unsplash.com/@kinteria",
+                    "author": "Kinteria Agency"
+                  },
+                  "clip": true,
+                  "width": 380,
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1770489570152-5113f885522c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE4ODd8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "8RqWo",
+                      "name": "extTag",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        6,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dL5bT",
+                          "fill": "#FFFFFFEE",
+                          "content": "Lingkungan",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "WvkXB",
+              "name": "Grid Row 3 - Fasilitas",
+              "width": "fill_container",
+              "height": 320,
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "TlYGp",
+                  "name": "Dapur Bersama",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "alextyson195",
+                    "link": "https://unsplash.com/@alextyson195",
+                    "author": "Alex Tyson"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1723470917429-69a45a042a59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE5MDN8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "8mTfz",
+                      "name": "facTag1",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        6,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Jp5Gj",
+                          "fill": "#FFFFFFEE",
+                          "content": "Dapur Bersama",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "tByui",
+                  "name": "Ruang Cuci",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "3dottawa",
+                    "link": "https://unsplash.com/@3dottawa",
+                    "author": "Point3D Commercial Imaging Ltd."
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1646592474094-342fbc28736c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE5MDR8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "pcGsr",
+                      "name": "facTag2",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        6,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "LSJte",
+                          "fill": "#FFFFFFEE",
+                          "content": "Ruang Cuci",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "3lLuF",
+                  "name": "Parkir",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "little_magical_moments",
+                    "link": "https://unsplash.com/@little_magical_moments",
+                    "author": "Priya"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1764965698807-9ee884a5ef4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE5MDR8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "bxG03",
+                      "name": "facTag3",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        6,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "CAyfq",
+                          "fill": "#FFFFFFEE",
+                          "content": "Parkir",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "m8Jim",
+              "name": "Grid Row 4 - Mixed",
+              "width": "fill_container",
+              "height": 320,
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "N3Xaj",
+                  "name": "Kamar Mandi",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "lisaanna195",
+                    "link": "https://unsplash.com/@lisaanna195",
+                    "author": "Lisa Anna"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1722650271336-d79811ca0e70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE5MTZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "AEfJj",
+                      "name": "bathTag",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        6,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Wlvn0",
+                          "fill": "#FFFFFFEE",
+                          "content": "Kamar Mandi",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "yF47T",
+                  "name": "Video Fasilitas",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "tama66",
+                    "link": "https://unsplash.com/@tama66",
+                    "author": "Peter Herrmann"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1658680399444-b59152807abf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE5MTd8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "RGN54",
+                      "name": "vidOverlay2",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": "#00000040",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "M8uUL",
+                          "name": "playBtn2",
+                          "width": 56,
+                          "height": 56,
+                          "fill": "#FFFFFFDD",
+                          "cornerRadius": "$rounded-full",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "kXj9C",
+                              "width": 24,
+                              "height": 24,
+                              "iconFontName": "play",
+                              "iconFontFamily": "lucide",
+                              "fill": "$fg-primary"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "YbnHo",
+                          "fill": "#FFFFFFEE",
+                          "content": "Tur Fasilitas Lengkap",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ZxD2l",
+                          "fill": "#FFFFFF99",
+                          "content": "4:12",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Rdtnm",
+                  "name": "Taman",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "gozstudio",
+                    "link": "https://unsplash.com/@gozstudio",
+                    "author": "mathieu gauzy"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1760727467162-6dcf63aca058?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE5MTh8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "by942",
+                      "name": "gardenTag",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        6,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "3WkTJ",
+                          "fill": "#FFFFFFEE",
+                          "content": "Lingkungan",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "p9z9u",
+              "name": "Grid Row 5",
+              "width": "fill_container",
+              "height": 320,
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "WH0Cs",
+                  "name": "Ruang Tamu",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "___atmos",
+                    "link": "https://unsplash.com/@___atmos",
+                    "author": "Caroline Badran"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1758565811176-ccd94357a844?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE5MzN8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "A5IeP",
+                      "name": "lvTag",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        6,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Ap5BT",
+                          "fill": "#FFFFFFEE",
+                          "content": "Ruang Tamu",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dBjHW",
+                  "name": "Meja Belajar",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "postcardsfromindia",
+                    "link": "https://unsplash.com/@postcardsfromindia",
+                    "author": "Anamica Jain"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1747139157633-35b1ce94beb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE5MzR8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "L8gnn",
+                      "name": "deskTag",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        6,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "1llsh",
+                          "fill": "#FFFFFFEE",
+                          "content": "Kamar",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "8HmYA",
+                  "name": "Lorong Kost",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "declansun",
+                    "link": "https://unsplash.com/@declansun",
+                    "author": "Declan Sun"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1754825653368-16f377733e86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDE5MzR8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-2xl",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "fiROr",
+                      "name": "hallTag",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        6,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "akJlm",
+                          "fill": "#FFFFFFEE",
+                          "content": "Lingkungan",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "HLZRE",
+              "name": "countLabel",
+              "fill": "$fg-muted",
+              "content": "Menampilkan 15 dari 32 foto & video",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "n2R82",
+              "name": "Pagination",
+              "width": "fill_container",
+              "gap": 16,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Qt50u",
+                  "name": "loadMoreBtn",
+                  "fill": "$accent-primary",
+                  "cornerRadius": "$rounded-full",
+                  "gap": 8,
+                  "padding": [
+                    14,
+                    40
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SXJwv",
+                      "fill": "$fg-inverse",
+                      "content": "Muat Lebih Banyak",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "tz5Cc",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "chevron-down",
+                      "iconFontFamily": "lucide",
+                      "fill": "$fg-inverse"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qNH3L",
+          "name": "Gallery Footer",
+          "width": "fill_container",
+          "fill": "$surface-inverse",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            48,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "R2Z9g",
+              "name": "Footer Top",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "MPOmL",
+                  "name": "ftBrand",
+                  "width": 300,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "KZMGD",
+                      "fill": "$fg-inverse",
+                      "content": "KostKu",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Lrx99",
+                      "fill": "#8C8782FF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Kost modern dengan fasilitas lengkap untuk kenyamanan Anda. Lokasi strategis dan harga terjangkau.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "a1BGb",
+                  "name": "ftLinks",
+                  "gap": 80,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "2tPM8",
+                      "name": "fcol1",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "YLnBy",
+                          "fill": "$fg-inverse",
+                          "content": "Navigasi",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "I35Pz",
+                          "fill": "#8C8782FF",
+                          "content": "Beranda",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "bTjEk",
+                          "fill": "#8C8782FF",
+                          "content": "Kamar",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "hQo2T",
+                          "fill": "#8C8782FF",
+                          "content": "Fasilitas",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ikymD",
+                          "fill": "#8C8782FF",
+                          "content": "Galeri",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "PHiGU",
+                      "name": "fcol2",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "BUEob",
+                          "fill": "$fg-inverse",
+                          "content": "Informasi",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "DbQiu",
+                          "fill": "#8C8782FF",
+                          "content": "Tentang Kami",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "bU6Jv",
+                          "fill": "#8C8782FF",
+                          "content": "Syarat & Ketentuan",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Dwalm",
+                          "fill": "#8C8782FF",
+                          "content": "Kebijakan Privasi",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "3RN6X",
+                          "fill": "#8C8782FF",
+                          "content": "FAQ",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "fhwbw",
+                      "name": "fcol3",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NbKyh",
+                          "fill": "$fg-inverse",
+                          "content": "Kontak",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "JHHQu",
+                          "fill": "#8C8782FF",
+                          "content": "+62 812 3456 7890",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "NqtTh",
+                          "fill": "#8C8782FF",
+                          "content": "info@kostku.com",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Fs52o",
+                          "fill": "#8C8782FF",
+                          "content": "Jl. Merdeka No. 45",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "8QxsD",
+                          "fill": "#8C8782FF",
+                          "content": "Jakarta Selatan",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "vTpyX",
+              "name": "ftDivider",
+              "fill": "#3D3530FF",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "nTvw1",
+              "name": "Footer Bottom",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "LkKUK",
+                  "fill": "#8C8782FF",
+                  "content": "© 2026 KostKu. Hak cipta dilindungi.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "HsVwc",
+                  "name": "ftSocial",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "reCBc",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "instagram",
+                      "iconFontFamily": "lucide",
+                      "fill": "#8C8782FF"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "XGTxd",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "facebook",
+                      "iconFontFamily": "lucide",
+                      "fill": "#8C8782FF"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "6DvOR",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "twitter",
+                      "iconFontFamily": "lucide",
+                      "fill": "#8C8782FF"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "pFIa1",
+      "x": 0,
+      "y": 5235,
+      "name": "Mobile - Kost Website",
+      "width": 390,
+      "fill": "$surface-primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "x3ibN",
+          "name": "M Hero",
+          "width": "fill_container",
+          "height": 580,
+          "fill": "$surface-primary",
+          "layout": "vertical"
+        },
+        {
+          "type": "frame",
+          "id": "r5YiL",
+          "name": "M Facilities",
+          "width": "fill_container",
+          "height": "fit_content(500)",
+          "fill": "$surface-primary",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            48,
+            24
+          ],
+          "alignItems": "center"
+        },
+        {
+          "type": "frame",
+          "id": "7CQjS",
+          "name": "M Room Types",
+          "width": "fill_container",
+          "height": "fit_content(600)",
+          "fill": "$surface-secondary",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            48,
+            24
+          ],
+          "alignItems": "center"
+        },
+        {
+          "type": "frame",
+          "id": "888Ml",
+          "name": "M Gallery",
+          "width": "fill_container",
+          "height": "fit_content(500)",
+          "fill": "$surface-primary",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            48,
+            24
+          ],
+          "alignItems": "center"
+        },
+        {
+          "type": "frame",
+          "id": "Z1vuO",
+          "name": "M Testimonials",
+          "width": "fill_container",
+          "height": "fit_content(400)",
+          "fill": "$surface-secondary",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            48,
+            24
+          ],
+          "alignItems": "center"
+        },
+        {
+          "type": "frame",
+          "id": "Vunwx",
+          "name": "M Contact CTA",
+          "width": "fill_container",
+          "height": "fit_content(400)",
+          "fill": "$surface-inverse",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            48,
+            24
+          ],
+          "alignItems": "center"
+        },
+        {
+          "type": "frame",
+          "id": "rAtwD",
+          "name": "M Footer",
+          "width": "fill_container",
+          "height": "fit_content(300)",
+          "fill": "$surface-inverse",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            32,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "33axi",
+      "x": 590,
+      "y": 5235,
+      "name": "Mobile - Gallery Page",
+      "width": 390,
+      "fill": "$surface-primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "HN6mM",
+          "name": "MG Navbar",
+          "width": "fill_container",
+          "height": 60,
+          "fill": "$surface-primary",
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "p3JDQ",
+              "fill": "$fg-primary",
+              "content": "KostKu",
+              "fontFamily": "Playfair Display",
+              "fontSize": 22,
+              "fontWeight": "700"
+            },
+            {
+              "type": "icon_font",
+              "id": "vcxvR",
+              "name": "menuIcon",
+              "width": 24,
+              "height": 24,
+              "iconFontName": "menu",
+              "iconFontFamily": "lucide",
+              "fill": "$fg-primary"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "FSDaq",
+          "name": "MG Header",
+          "width": "fill_container",
+          "fill": "$surface-primary",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            32,
+            20,
+            24,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "ieBga",
+              "name": "breadcrumb",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "oFATA",
+                  "fill": "$accent-primary",
+                  "content": "Beranda",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "BLOeT",
+                  "width": 12,
+                  "height": 12,
+                  "iconFontName": "chevron-right",
+                  "iconFontFamily": "lucide",
+                  "fill": "$fg-muted"
+                },
+                {
+                  "type": "text",
+                  "id": "q0P8a",
+                  "fill": "$fg-muted",
+                  "content": "Galeri",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "qqfCy",
+              "name": "mhTitle",
+              "fill": "$fg-primary",
+              "content": "Galeri Foto & Video",
+              "textAlign": "center",
+              "fontFamily": "Playfair Display",
+              "fontSize": 28,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "w5AtM",
+              "name": "mhSubtitle",
+              "fill": "$fg-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Jelajahi semua foto dan video tur kost kami.",
+              "lineHeight": 1.5,
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "GuzrW",
+              "name": "Filter Tabs",
+              "width": "fill_container",
+              "gap": 8,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "6gGlD",
+                  "name": "fActive",
+                  "fill": "$accent-primary",
+                  "cornerRadius": "$rounded-full",
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "JCEK0",
+                      "fill": "$fg-inverse",
+                      "content": "Semua",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ScAsW",
+                  "name": "f2",
+                  "fill": "$surface-secondary",
+                  "cornerRadius": "$rounded-full",
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "eDmrK",
+                      "fill": "$fg-secondary",
+                      "content": "Kamar",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KcENd",
+                  "name": "f3",
+                  "fill": "$surface-secondary",
+                  "cornerRadius": "$rounded-full",
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Je7P3",
+                      "fill": "$fg-secondary",
+                      "content": "Fasilitas",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UkBuc",
+                  "name": "f4",
+                  "fill": "$surface-secondary",
+                  "cornerRadius": "$rounded-full",
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DBmTB",
+                      "fill": "$fg-secondary",
+                      "content": "Lingkungan",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oBNFz",
+                  "name": "f5",
+                  "fill": "$surface-secondary",
+                  "cornerRadius": "$rounded-full",
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "goURa",
+                      "fill": "$fg-secondary",
+                      "content": "Video",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "bqi32",
+          "name": "MG Grid Section",
+          "width": "fill_container",
+          "fill": "$surface-primary",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            0,
+            20,
+            48,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "sprB4",
+              "name": "MG Video Featured",
+              "metadata": {
+                "type": "unsplash",
+                "username": "poojanclicks",
+                "link": "https://unsplash.com/@poojanclicks",
+                "author": "POOJAN THANEKAR"
+              },
+              "clip": true,
+              "width": "fill_container",
+              "height": 220,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1767800766429-7179fd80948f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDIxOTZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": "$rounded-2xl",
+              "layout": "vertical",
+              "gap": 6,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "dhG9W",
+                  "name": "vidOv",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000040",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "hjrRp",
+                      "name": "playB",
+                      "width": 56,
+                      "height": 56,
+                      "fill": "#FFFFFFDD",
+                      "cornerRadius": "$rounded-full",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "miAzk",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "play",
+                          "iconFontFamily": "lucide",
+                          "fill": "$fg-primary"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "nvfS4",
+                      "fill": "#FFFFFFEE",
+                      "content": "Video Tur Kamar",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "0pGHL",
+                      "fill": "#FFFFFF99",
+                      "content": "2:45",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "nf620",
+              "name": "MG Row 1",
+              "width": "fill_container",
+              "height": 170,
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "L6F6R",
+                  "name": "mg2",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "shoham_avisrur",
+                    "link": "https://unsplash.com/@shoham_avisrur",
+                    "author": "Shoham Avisrur"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1763478958800-3a2a6321f645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDIxOTd8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-xl",
+                  "layout": "vertical",
+                  "padding": 10,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "U5kJ9",
+                      "name": "t1",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "XrG2x",
+                          "fill": "#FFFFFFEE",
+                          "content": "Kamar",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HMktU",
+                  "name": "mg3",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "loudspace",
+                    "link": "https://unsplash.com/@loudspace",
+                    "author": "Jon Stebbe"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1585412727061-be62ede56406?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDIxOTd8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-xl",
+                  "layout": "vertical",
+                  "padding": 10,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "LlBsX",
+                      "name": "t2",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Dt0rl",
+                          "fill": "#FFFFFFEE",
+                          "content": "Fasilitas",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Zh5YH",
+              "name": "MG Full Width",
+              "metadata": {
+                "type": "unsplash",
+                "username": "alextyson195",
+                "link": "https://unsplash.com/@alextyson195",
+                "author": "Alex Tyson"
+              },
+              "clip": true,
+              "width": "fill_container",
+              "height": 220,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1723639904866-16cf9652870f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDIxOTh8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": "$rounded-2xl",
+              "layout": "vertical",
+              "padding": 14,
+              "justifyContent": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "TAwmc",
+                  "name": "t3",
+                  "fill": "#000000AA",
+                  "cornerRadius": "$rounded-full",
+                  "padding": [
+                    4,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AxQaF",
+                      "fill": "#FFFFFFEE",
+                      "content": "Dapur Bersama",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "YMiwt",
+              "name": "MG Row 2",
+              "width": "fill_container",
+              "height": 170,
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "jL4OM",
+                  "name": "mg5",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "jaydekeroi",
+                    "link": "https://unsplash.com/@jaydekeroi",
+                    "author": "Jayde Keroi"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1761565864676-4814cfee788d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDIxOTl8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-xl",
+                  "layout": "vertical",
+                  "padding": 10,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "WRz13",
+                      "name": "t4",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "MzScf",
+                          "fill": "#FFFFFFEE",
+                          "content": "Lingkungan",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "BXnz9",
+                  "name": "mg6",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "avirichards",
+                    "link": "https://unsplash.com/@avirichards",
+                    "author": "Avi Richards"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1624381987697-3f93d65ddeea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDIxOTl8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-xl",
+                  "layout": "vertical",
+                  "padding": 10,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "G8BlD",
+                      "name": "t5",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "FZDb4",
+                          "fill": "#FFFFFFEE",
+                          "content": "Fasilitas",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "5NGDu",
+              "name": "MG Row 3",
+              "width": "fill_container",
+              "height": 170,
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "qsOuL",
+                  "name": "mg7",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "susan_wilkinson",
+                    "link": "https://unsplash.com/@susan_wilkinson",
+                    "author": "Susan Wilkinson"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1606796913622-568a03126269?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDIyMjl8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-xl",
+                  "layout": "vertical",
+                  "padding": 10,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "R23mM",
+                      "name": "rt1",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "zqyC0",
+                          "fill": "#FFFFFFEE",
+                          "content": "Kamar",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vHOUT",
+                  "name": "mg8",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "melamuna",
+                    "link": "https://unsplash.com/@melamuna",
+                    "author": "Vincent Dave Agustin"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": [
+                    "$surface-inverse",
+                    {
+                      "type": "image",
+                      "opacity": 0.3,
+                      "enabled": true,
+                      "url": "https://images.unsplash.com/photo-1770843244931-9e6d4d1055be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDEyMjd8&ixlib=rb-4.1.0&q=80&w=1080",
+                      "mode": "fill"
+                    }
+                  ],
+                  "cornerRadius": "$rounded-xl",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AU3NQ",
+                      "fill": "$fg-inverse",
+                      "content": "+12",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "REYYv",
+                      "fill": "#FFFFFFBB",
+                      "content": "Foto & Video",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "IqlCt",
+              "name": "MG Video 2",
+              "metadata": {
+                "type": "unsplash",
+                "username": "sb_dn",
+                "link": "https://unsplash.com/@sb_dn",
+                "author": "Shahabudin Ibragimov"
+              },
+              "clip": true,
+              "width": "fill_container",
+              "height": 200,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1767294274764-6421a7603098?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDIyMzB8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": "$rounded-2xl",
+              "layout": "vertical",
+              "gap": 6,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wluzy",
+                  "name": "vidOv2",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000040",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ru36q",
+                      "name": "playB2",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#FFFFFFDD",
+                      "cornerRadius": "$rounded-full",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "Bh72D",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "play",
+                          "iconFontFamily": "lucide",
+                          "fill": "$fg-primary"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "w9Pd5",
+                      "fill": "#FFFFFFEE",
+                      "content": "Tur Fasilitas",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "blfZe",
+                      "fill": "#FFFFFF99",
+                      "content": "4:12",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "E1GwF",
+              "name": "MG Row 4",
+              "width": "fill_container",
+              "height": 170,
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "78g2F",
+                  "name": "mg10",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "walls_io",
+                    "link": "https://unsplash.com/@walls_io",
+                    "author": "Walls.io"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1676287566089-f4a9eb16f5b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDIyMzB8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-xl",
+                  "layout": "vertical",
+                  "padding": 10,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "1j5xS",
+                      "name": "rt2",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WNwq8",
+                          "fill": "#FFFFFFEE",
+                          "content": "Kamar",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "1v7Lu",
+                  "name": "mg11",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "ammar_andiko",
+                    "link": "https://unsplash.com/@ammar_andiko",
+                    "author": "Ammar Andiko"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1656644177899-a83d045640e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxNDIyMzF8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": "$rounded-xl",
+                  "layout": "vertical",
+                  "padding": 10,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "M9f03",
+                      "name": "rt3",
+                      "fill": "#000000AA",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WpYhR",
+                          "fill": "#FFFFFFEE",
+                          "content": "Parkir",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "kH0Uy",
+              "name": "countTxt",
+              "fill": "$fg-muted",
+              "content": "Menampilkan 12 dari 32 foto & video",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "StOBy",
+              "name": "loadBtn",
+              "fill": "$accent-primary",
+              "cornerRadius": "$rounded-full",
+              "gap": 8,
+              "padding": [
+                12,
+                32
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jM6n1",
+                  "fill": "$fg-inverse",
+                  "content": "Muat Lebih Banyak",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "6Fj49",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "chevron-down",
+                  "iconFontFamily": "lucide",
+                  "fill": "$fg-inverse"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "MfMli",
+          "name": "MG Footer",
+          "width": "fill_container",
+          "fill": "$surface-inverse",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            32,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "jRQDi",
+              "fill": "$fg-inverse",
+              "content": "KostKu",
+              "fontFamily": "Playfair Display",
+              "fontSize": 22,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "rmQrc",
+              "fill": "#8C8782FF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Kost modern dengan fasilitas lengkap untuk kenyamanan Anda.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "9vC8a",
+              "name": "fColsRow",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "5OgHA",
+                  "name": "fc1",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yy311",
+                      "fill": "$fg-inverse",
+                      "content": "Navigasi",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Jf7tS",
+                      "fill": "#8C8782FF",
+                      "content": "Beranda",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "5yjg2",
+                      "fill": "#8C8782FF",
+                      "content": "Kamar",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "f6TEV",
+                      "fill": "#8C8782FF",
+                      "content": "Fasilitas",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "CCgc0",
+                      "fill": "#8C8782FF",
+                      "content": "Galeri",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "IR9UV",
+                  "name": "fc2",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "8Outh",
+                      "fill": "$fg-inverse",
+                      "content": "Kontak",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Ef4F1",
+                      "fill": "#8C8782FF",
+                      "content": "+62 812 3456 7890",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "DVAkT",
+                      "fill": "#8C8782FF",
+                      "content": "info@kostku.com",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "iZUNi",
+                      "fill": "#8C8782FF",
+                      "content": "Jl. Merdeka No. 45",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "JAid6",
+              "name": "fDiv",
+              "fill": "#3D3530FF",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "27xd3",
+              "name": "fBtm",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "90V3H",
+                  "fill": "#8C8782FF",
+                  "content": "© 2026 KostKu",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "i2pvb",
+                  "name": "fSocial",
+                  "gap": 14,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "feGGm",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "instagram",
+                      "iconFontFamily": "lucide",
+                      "fill": "#8C8782FF"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "rEw4w",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "facebook",
+                      "iconFontFamily": "lucide",
+                      "fill": "#8C8782FF"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "Zk7VQ",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "twitter",
+                      "iconFontFamily": "lucide",
+                      "fill": "#8C8782FF"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "accent-primary": {
+      "type": "color",
+      "value": "#7D6B3DFF"
+    },
+    "fg-inverse": {
+      "type": "color",
+      "value": "#F5F2E9FF"
+    },
+    "fg-muted": {
+      "type": "color",
+      "value": "#8C8782FF"
+    },
+    "fg-primary": {
+      "type": "color",
+      "value": "#2D2926FF"
+    },
+    "fg-secondary": {
+      "type": "color",
+      "value": "#5E5954FF"
+    },
+    "rounded-2xl": {
+      "type": "number",
+      "value": 16
+    },
+    "rounded-full": {
+      "type": "number",
+      "value": 9999
+    },
+    "rounded-lg": {
+      "type": "number",
+      "value": 8
+    },
+    "rounded-xl": {
+      "type": "number",
+      "value": 12
+    },
+    "surface-inverse": {
+      "type": "color",
+      "value": "#2D2926FF"
+    },
+    "surface-primary": {
+      "type": "color",
+      "value": "#F5F2E9FF"
+    },
+    "surface-secondary": {
+      "type": "color",
+      "value": "#E8E4D8FF"
+    }
+  }
+}
