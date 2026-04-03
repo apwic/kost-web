@@ -215,3 +215,238 @@ After this milestone:
 8. **hreflang tags:** Skip entirely. Indonesian only for the foreseeable future.
 
 9. **Share button:** Nice-to-have. Implement if time permits during M4.
+
+### 9. Task Breakdown
+
+Below is the implementation plan for M4, organized into sequential tasks. Each task lists the files to create or modify, what to do, and an estimated scope.
+
+---
+
+#### Task 1: SEO Meta Tags (Next.js Metadata API)
+
+**Goal:** Every page has unique, complete meta tags including Open Graph and Twitter Card for rich previews on WhatsApp/social media.
+
+**What exists now:**
+- `app/layout.tsx` already sets `lang="id"` on `<html>` and has a basic `metadata` export with a static title and description.
+- `app/gallery/page.tsx` has a static `metadata` export with title "Galeri - KostKu" and a description.
+- No Open Graph tags, no Twitter Card tags, no `og:image` on any page.
+
+**Steps:**
+1. In `app/layout.tsx`, convert the static `metadata` export to include shared defaults that apply across all pages:
+   - Set `metadataBase` to the site URL (use `NEXT_PUBLIC_SITE_URL` env var, fallback to Vercel URL).
+   - Add default `openGraph` config: `siteName`, `locale: "id_ID"`, `type: "website"`.
+   - Add default `twitter` config: `card: "summary_large_image"`.
+2. In `app/page.tsx`, add a `generateMetadata` async function that fetches `site_name` and `hero_image_url` from `site_settings` via Supabase and returns:
+   - `title`: "KostKu -- Kost Modern di Jakarta" (from site_settings or fallback).
+   - `description`: A compelling Indonesian meta description (max 160 chars), e.g., "Kost modern dengan fasilitas lengkap, lokasi strategis, dan harga terjangkau di Jakarta. Mulai dari Rp 1,5 juta/bulan."
+   - `openGraph`: `title`, `description`, `images` (use `hero_image_url` at 1200x630), `url: "/"`.
+   - `twitter`: `title`, `description`, `images`.
+   - Wrap Supabase call in try/catch with sensible fallbacks.
+3. In `app/gallery/page.tsx`, convert the static `metadata` to a `generateMetadata` async function:
+   - `title`: "Galeri | KostKu -- Kost Modern di Jakarta".
+   - `description`: "Jelajahi foto dan video tur kost kami. Lihat kamar, fasilitas, dan lingkungan KostKu."
+   - `openGraph.images`: Use first featured gallery image or fallback hero.
+4. Add `NEXT_PUBLIC_SITE_URL` to `.env.example` (or `.env.local` notes) for documentation.
+
+**Files to modify:** `app/layout.tsx`, `app/page.tsx`, `app/gallery/page.tsx`
+**Files to create:** None
+
+---
+
+#### Task 2: Structured Data (JSON-LD)
+
+**Goal:** Add LocalBusiness JSON-LD on the landing page and BreadcrumbList JSON-LD on the gallery page for Google rich results.
+
+**What exists now:** No structured data anywhere.
+
+**Steps:**
+1. Create a shared helper `lib/jsonld.ts` with functions:
+   - `buildLocalBusinessJsonLd(settings, testimonials)` -- constructs a `LocalBusiness` schema object with: `@type`, `name`, `address` (from `site_settings.address`), `telephone` (from `site_settings.phone_number`), `geo` (from `site_settings.latitude`/`longitude` -- use Jakarta placeholder `-6.2088, 106.8456` if missing), `image`, `priceRange`, `aggregateRating` (computed from visible testimonials' ratings).
+   - `buildBreadcrumbJsonLd(items)` -- constructs a `BreadcrumbList` schema.
+2. In `app/page.tsx`, fetch address/phone/lat/lng from `site_settings` and testimonials ratings, then render a `<script type="application/ld+json">` tag in the component body with the LocalBusiness data. Reuse existing Supabase fetch patterns (try/catch with fallback).
+3. In `app/gallery/page.tsx`, add a `<script type="application/ld+json">` tag with BreadcrumbList: `Home > Galeri`.
+
+**Files to create:** `lib/jsonld.ts`
+**Files to modify:** `app/page.tsx`, `app/gallery/page.tsx`
+
+---
+
+#### Task 3: Sitemap and Robots
+
+**Goal:** Auto-generate `sitemap.xml` and `robots.txt` using Next.js App Router conventions.
+
+**What exists now:** No `sitemap.ts` or `robots.ts` files.
+
+**Steps:**
+1. Create `app/sitemap.ts`:
+   - Export a default async function that returns a `MetadataRoute.Sitemap` array.
+   - Include `/` and `/gallery` as entries.
+   - Query Supabase for the most recent `updated_at` from `site_settings`, `gallery`, and `rooms` tables to populate `lastModified`.
+   - Use `NEXT_PUBLIC_SITE_URL` env var for the base URL (fallback to `https://kostku.vercel.app`).
+2. Create `app/robots.ts`:
+   - Export a default function returning `MetadataRoute.Robots`.
+   - `Allow: /` for all user-agents.
+   - `Disallow: /admin` to block admin routes.
+   - `sitemap` pointing to `${baseUrl}/sitemap.xml`.
+
+**Files to create:** `app/sitemap.ts`, `app/robots.ts`
+**Files to modify:** None
+
+---
+
+#### Task 4: Custom 404 and Error Pages
+
+**Goal:** Branded error pages so users never see raw Next.js error screens.
+
+**What exists now:** No `not-found.tsx`, `error.tsx`, or `global-error.tsx` in the app directory. Only `page.tsx`, `layout.tsx`, `globals.css`, and the `gallery/` route.
+
+**Steps:**
+1. Create `app/not-found.tsx` (Server Component):
+   - Use the same visual style as the site (import Navbar + Footer from `components/landing/`).
+   - Display: "Halaman Tidak Ditemukan" heading, "Maaf, halaman yang Anda cari tidak tersedia." description, and a "Kembali ke Beranda" button linking to `/`.
+   - Keep it simple -- no Supabase calls (it must always render even if DB is down).
+2. Create `app/error.tsx` (Client Component with `"use client"`):
+   - Accept `error` and `reset` props.
+   - Display: "Terjadi Kesalahan" heading, a brief message, and a "Coba Lagi" button that calls `reset()`.
+   - Minimal layout (do not import Navbar/Footer to avoid cascading failures; use inline branding).
+3. Create `app/global-error.tsx` (Client Component):
+   - Top-level fallback for root layout errors.
+   - Must include its own `<html>` and `<body>` tags.
+   - Display a minimal error screen with "Terjadi Kesalahan" and a reload button.
+
+**Files to create:** `app/not-found.tsx`, `app/error.tsx`, `app/global-error.tsx`
+**Files to modify:** None
+
+---
+
+#### Task 5: Performance Audit and Fixes
+
+**Goal:** Ensure Lighthouse scores of 90+ across Performance, Accessibility, Best Practices, and SEO.
+
+**What exists now:**
+- Fonts are already loaded via `next/font/google` with `display: "swap"` in `app/layout.tsx` -- good.
+- Hero image in `Hero.tsx` uses a CSS `background-image` (not optimized by Next.js `<Image>`).
+- Gallery images in `GalleryItem.tsx` likely use `<Image>` already.
+- Room card images in `RoomTypes.tsx` use `<Image>` with `fill` and `sizes` -- good.
+- `next.config.ts` has Unsplash and Supabase as remote image patterns -- good.
+- No dynamic imports for heavy below-fold components.
+- Lightbox (`yet-another-react-lightbox`) is already a client component, but not dynamically imported.
+
+**Steps:**
+1. **Hero image optimization:** In `components/landing/Hero.tsx`, replace the CSS `background-image` with a Next.js `<Image>` component using `fill`, `priority`, and proper `sizes`. This enables automatic WebP conversion and optimized loading.
+2. **Dynamic imports for heavy components:**
+   - In `components/gallery/GalleryGrid.tsx` (or wherever `PhotoLightbox` is imported), use `next/dynamic` to lazy-load `PhotoLightbox` and `VideoPlayer` so they are not included in the initial JS bundle.
+3. **Image `sizes` audit:** Review all `<Image>` components and verify `sizes` attributes match actual responsive breakpoints.
+4. **Accessibility pass:**
+   - Ensure all interactive elements have proper `aria-label` attributes (check WhatsApp buttons, social links, filter tabs).
+   - Verify color contrast ratios meet WCAG AA for all text/background combinations in the design tokens.
+   - Add `alt` text to any images missing it.
+5. **Run Lighthouse** (manual step): After all code changes, run Lighthouse on both `/` and `/gallery` and fix any remaining issues flagged.
+
+**Files to modify:** `components/landing/Hero.tsx`, `components/gallery/GalleryGrid.tsx` (or related), other components as needed based on audit
+**Files to create:** None
+
+---
+
+#### Task 6: Seed Data Updates (lat/lng, maps URL)
+
+**Goal:** Add location coordinates and maps-related settings to seed data so the schema is ready for Google Maps integration (placeholder for now).
+
+**What exists now:**
+- `site_settings` table has: `whatsapp_number`, `phone_number`, `address`, `email`, `site_name`, `hero_image_url`, `hero_headline`, `hero_subtitle`, `whatsapp_greeting`.
+- No `latitude`, `longitude`, `maps_embed_url`, or `ga_measurement_id` keys.
+
+**Steps:**
+1. In `supabase/seed.sql`, add new INSERT statements for `site_settings`:
+   - `latitude` = `-6.2088` (Jakarta placeholder).
+   - `longitude` = `106.8456` (Jakarta placeholder).
+   - `maps_embed_url` = a placeholder Google Maps embed URL for Jakarta (e.g., `https://www.google.com/maps/embed?pb=...` using generic Jakarta coords).
+   - `ga_measurement_id` = `''` (empty, to be filled when analytics is set up).
+2. In `supabase/schema.sql`, no changes needed -- `site_settings` is a generic key-value table that handles this already.
+3. If an `ALTER` migration pattern is used for the project, add a migration file. Otherwise, just update the seed.
+
+**Files to modify:** `supabase/seed.sql`
+**Files to create:** None
+
+---
+
+#### Task 7: Analytics Placeholder (Skip Full Implementation)
+
+**Goal:** Per owner decision, skip full analytics integration for now. Add a placeholder so it can be wired up later without structural changes.
+
+**What exists now:**
+- `WhatsAppButton.tsx` already has an empty `onClick` handler with a `// Tracking placeholder for analytics` comment.
+- No analytics script loaded anywhere.
+
+**Steps:**
+1. Create `lib/analytics.ts` with a placeholder `trackEvent(eventName: string, params?: Record<string, string>)` function:
+   - For now, it just does a `console.debug` in development and is a no-op in production.
+   - Include a `TODO` comment explaining how to wire up GA4 or an alternative when ready.
+   - Define typed event name constants: `WHATSAPP_CLICK`, `GALLERY_FILTER`, `CTA_CLICK`, `ROOM_INQUIRY`.
+2. Update `components/ui/WhatsAppButton.tsx` to import and call `trackEvent("whatsapp_click", { source })` in the existing `onClick` handler. Add a `source` prop to the component.
+3. Add a comment block in `app/layout.tsx` marking where the analytics `<Script>` tag should go when ready.
+
+**Files to create:** `lib/analytics.ts`
+**Files to modify:** `components/ui/WhatsAppButton.tsx`, `app/layout.tsx`
+
+---
+
+#### Task 8: Google Maps Placeholder (Skip Full Embed)
+
+**Goal:** Per owner decision, skip the full Google Maps embed for now. Add a placeholder area in the Contact section that can be swapped for a real map later.
+
+**What exists now:**
+- `components/landing/ContactCTA.tsx` has a contact section with phone, WhatsApp, and address cards but no map.
+- The seed data will have `latitude`/`longitude` after Task 6.
+
+**Steps:**
+1. In `components/landing/ContactCTA.tsx`, add a map placeholder below the contact cards:
+   - A styled container (matching the section's dark theme) with a MapPin icon, the address text, and a "Buka di Google Maps" link that opens `https://www.google.com/maps/search/?api=1&query={latitude},{longitude}` in a new tab.
+   - Fetch `latitude` and `longitude` from `site_settings` (extend the existing `getContactInfo` function).
+   - Add a `TODO` comment: "Replace this placeholder with a Google Maps iframe embed or @vis.gl/react-google-maps component."
+2. On mobile, the "Buka di Google Maps" link will naturally open the native maps app.
+
+**Files to modify:** `components/landing/ContactCTA.tsx`
+**Files to create:** None
+
+---
+
+#### Task 9: Testing and Verification
+
+**Goal:** Verify all M4 changes work correctly across pages and don't break existing functionality.
+
+**Steps:**
+1. **Build test:** Run `npm run build` and confirm zero errors. This validates:
+   - All metadata exports/generateMetadata functions compile.
+   - `sitemap.ts` and `robots.ts` generate valid output.
+   - Error pages compile (especially `error.tsx` which must be a Client Component).
+   - JSON-LD scripts render without issues.
+2. **Manual page checks:**
+   - Visit `/` -- verify meta tags in page source (title, description, og:image, twitter:card).
+   - Visit `/gallery` -- verify meta tags and breadcrumb JSON-LD in page source.
+   - Visit `/nonexistent-route` -- verify custom 404 page renders with branding.
+   - Visit `/sitemap.xml` -- verify it lists `/` and `/gallery` with `lastmod` dates.
+   - Visit `/robots.txt` -- verify it allows `/`, disallows `/admin`, and points to sitemap.
+3. **Structured data validation:** Paste the landing page HTML into Google's Rich Results Test (https://search.google.com/test/rich-results) and confirm LocalBusiness data is valid.
+4. **Lighthouse audit:** Run Lighthouse on `/` and `/gallery` in Chrome DevTools. Target 90+ on all four categories. Fix any flagged issues.
+5. **Mobile responsiveness:** Test 404 page and maps placeholder on mobile viewport sizes.
+6. **Analytics placeholder:** Confirm `trackEvent` calls appear in browser console (dev mode only) when clicking WhatsApp buttons.
+
+**Files to modify:** None (testing only)
+**Files to create:** None
+
+---
+
+#### Suggested Implementation Order
+
+| Order | Task | Depends On | Est. Effort |
+|-------|------|------------|-------------|
+| 1 | Task 6: Seed data updates | None | Small |
+| 2 | Task 1: SEO meta tags | None | Medium |
+| 3 | Task 2: Structured data (JSON-LD) | Task 1 (metadataBase) | Medium |
+| 4 | Task 3: Sitemap + robots | Task 1 (metadataBase) | Small |
+| 5 | Task 4: Custom error pages | None | Small |
+| 6 | Task 7: Analytics placeholder | None | Small |
+| 7 | Task 8: Google Maps placeholder | Task 6 (lat/lng in seed) | Small |
+| 8 | Task 5: Performance audit + fixes | Tasks 1-4 done | Medium |
+| 9 | Task 9: Testing | All above | Medium |
