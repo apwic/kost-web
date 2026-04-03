@@ -134,4 +134,8 @@ INSERT INTO site_settings (key, value) VALUES
 ('hero_image_url', 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80'),
 ('hero_headline', 'Kost Modern di Jantung Jakarta'),
 ('hero_subtitle', 'Nikmati hunian nyaman dengan fasilitas lengkap, lokasi strategis, dan harga terjangkau. KostKu — rumah kedua Anda di Jakarta.'),
-('whatsapp_greeting', 'Halo KostKu! Saya tertarik untuk mengetahui lebih lanjut tentang kamar yang tersedia.');
+('whatsapp_greeting', 'Halo KostKu! Saya tertarik untuk mengetahui lebih lanjut tentang kamar yang tersedia.'),
+('latitude', '-6.2088'),
+('longitude', '106.8456'),
+('maps_embed_url', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.84513!3d-6.2088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMzEuNyJTIDEwNsKwNTAnNDIuNSJF!5e0!3m2!1sid!2sid!4v1'),
+('ga_measurement_id', '');

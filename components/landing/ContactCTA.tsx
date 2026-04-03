@@ -8,6 +8,8 @@ interface ContactInfo {
   whatsapp: string;
   address: string;
   greeting: string;
+  latitude: string;
+  longitude: string;
 }
 
 const fallbackContact: ContactInfo = {
@@ -15,6 +17,8 @@ const fallbackContact: ContactInfo = {
   whatsapp: "6281234567890",
   address: "Jl. Merdeka No. 45, Jakarta Selatan",
   greeting: "Halo, saya tertarik dengan KostKu. Bisa info lebih lanjut?",
+  latitude: "-6.2088",
+  longitude: "106.8456",
 };
 
 async function getContactInfo(): Promise<ContactInfo> {
@@ -23,7 +27,7 @@ async function getContactInfo(): Promise<ContactInfo> {
     const { data } = await supabase
       .from("site_settings")
       .select("key, value")
-      .in("key", ["phone_number", "whatsapp_number", "address", "whatsapp_greeting"]);
+      .in("key", ["phone_number", "whatsapp_number", "address", "whatsapp_greeting", "latitude", "longitude"]);
 
     if (data && data.length > 0) {
       const settings = Object.fromEntries(data.map((s) => [s.key, s.value]));
@@ -32,6 +36,8 @@ async function getContactInfo(): Promise<ContactInfo> {
         whatsapp: settings.whatsapp_number || fallbackContact.whatsapp,
         address: settings.address || fallbackContact.address,
         greeting: settings.whatsapp_greeting || fallbackContact.greeting,
+        latitude: settings.latitude || fallbackContact.latitude,
+        longitude: settings.longitude || fallbackContact.longitude,
       };
     }
   } catch {
@@ -77,11 +83,32 @@ export default async function ContactCTA() {
           ))}
         </div>
 
+        {/* Map placeholder — TODO: Replace with Google Maps iframe embed or @vis.gl/react-google-maps */}
+        <div className="w-full max-w-3xl mb-10">
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${contact.latitude},${contact.longitude}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 bg-[#3D3530] rounded-2xl py-5 px-6 hover:bg-[#4A443F] transition-colors"
+          >
+            <MapPin className="w-5 h-5 text-accent-primary shrink-0" />
+            <div className="flex-1 min-w-0">
+              <span className="font-[family-name:var(--font-body)] text-sm font-semibold text-fg-inverse block">
+                Buka di Google Maps
+              </span>
+              <span className="font-[family-name:var(--font-body)] text-xs text-fg-muted">
+                {contact.address}
+              </span>
+            </div>
+          </a>
+        </div>
+
         {/* WhatsApp CTA */}
         <WhatsAppButton
           phoneNumber={contact.whatsapp}
           message={contact.greeting}
           variant="accent"
+          source="contact_cta"
           className="rounded-full px-12 py-4 font-[family-name:var(--font-body)] text-base font-semibold w-full lg:w-auto"
         >
           <MessageCircle className="w-5 h-5" />

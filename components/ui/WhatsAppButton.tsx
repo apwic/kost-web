@@ -1,6 +1,7 @@
 "use client";
 
 import { generateWhatsAppUrl } from "@/lib/whatsapp";
+import { trackEvent, EVENTS } from "@/lib/analytics";
 
 interface WhatsAppButtonProps {
   phoneNumber: string;
@@ -9,6 +10,7 @@ interface WhatsAppButtonProps {
   className?: string;
   variant?: "accent" | "green";
   fullWidth?: boolean;
+  source?: string;
 }
 
 export default function WhatsAppButton({
@@ -18,6 +20,7 @@ export default function WhatsAppButton({
   className = "",
   variant = "green",
   fullWidth = false,
+  source = "unknown",
 }: WhatsAppButtonProps) {
   const baseStyles =
     "inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 font-medium transition-colors";
@@ -34,7 +37,7 @@ export default function WhatsAppButton({
       rel="noopener noreferrer"
       className={`${baseStyles} ${variantStyles} ${widthStyles} ${className}`}
       onClick={() => {
-        // Tracking placeholder for analytics
+        trackEvent(EVENTS.WHATSAPP_CLICK, { source });
       }}
     >
       {children}

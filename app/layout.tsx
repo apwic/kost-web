@@ -24,9 +24,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://kostku.vercel.app"
+  ),
   title: "KostKu — Kost Modern di Jakarta",
   description:
     "Kost modern dengan fasilitas lengkap, lokasi strategis, dan harga terjangkau.",
+  openGraph: {
+    siteName: "KostKu",
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({

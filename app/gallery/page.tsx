@@ -6,13 +6,31 @@ import GalleryHeader from "@/components/gallery/GalleryHeader";
 import GalleryGrid from "@/components/gallery/GalleryGrid";
 import { createClient } from "@/lib/supabase/server";
 import { BATCH_SIZE, type GalleryCategory } from "@/lib/gallery";
+import { buildBreadcrumbJsonLd } from "@/lib/jsonld";
 import type { GalleryItem } from "@/lib/types";
 
-export const metadata: Metadata = {
-  title: "Galeri - KostKu",
-  description:
-    "Jelajahi foto dan video tur kost kami. Lihat kamar, fasilitas, dan lingkungan KostKu.",
-};
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://kostku.vercel.app";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Galeri | KostKu — Kost Modern di Jakarta",
+    description:
+      "Jelajahi galeri foto dan video KostKu. Lihat kamar modern, fasilitas lengkap, dan lingkungan nyaman kost kami di Jakarta.",
+    openGraph: {
+      title: "Galeri | KostKu — Kost Modern di Jakarta",
+      description:
+        "Jelajahi galeri foto dan video KostKu. Lihat kamar modern, fasilitas lengkap, dan lingkungan nyaman kost kami di Jakarta.",
+      images: [{ url: `${siteUrl}/og-gallery.jpg` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Galeri | KostKu — Kost Modern di Jakarta",
+      description:
+        "Jelajahi galeri foto dan video KostKu. Lihat kamar modern, fasilitas lengkap, dan lingkungan nyaman kost kami di Jakarta.",
+    },
+  };
+}
 
 const FALLBACK_ITEMS: GalleryItem[] = [
   { id: "1", title: "Kamar Deluxe - Interior Modern", media_type: "photo", media_url: "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=1200&q=80", thumbnail_url: "", category: "kamar", duration: "", is_featured: false, alt_text: "Interior kamar deluxe", sort_order: 1, created_at: "" },
@@ -80,8 +98,17 @@ export default async function GalleryPage({
 
   const { items, count } = await getInitialGalleryData(category);
 
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Beranda", url: siteUrl },
+    { name: "Galeri", url: `${siteUrl}/gallery` },
+  ]);
+
   return (
     <main className="min-h-screen bg-surface-primary text-fg-primary">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Navbar variant="solid" />
       <GalleryHeader />
       <Suspense>
