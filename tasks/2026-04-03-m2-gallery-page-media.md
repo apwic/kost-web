@@ -354,13 +354,24 @@ Refactor the Navbar into a single shared component that accepts a `variant` prop
 
 - `/kost.pen` — Design file. Frames "Gallery Page" (desktop, 1440px) and "Mobile - Gallery Page" (mobile, 390px) are the source of truth for this milestone.
 - `/app/page.tsx` — Landing page (M1). Review how sections are composed and how data is fetched.
-- `/components/landing/Navbar.tsx` — Landing page navbar (M1). Will be refactored into a shared component.
-- `/components/landing/Footer.tsx` — Landing page footer (M1). Will be reused directly.
-- `/components/landing/GalleryPreview.tsx` — Landing page gallery preview (M1). Review how it links to `/gallery`.
-- `/lib/supabase.ts` — Supabase client setup (M1). Same client is used for gallery data fetching.
-- `/lib/types.ts` — TypeScript interfaces (M1). The `Gallery` type is already defined here.
-- `/supabase/schema.sql` — Database schema (M1). The `gallery` table structure is defined here.
-- `/supabase/seed.sql` — Seed data (M1). Initial gallery entries are here; may need to be expanded with more items for M2 testing.
+- `/app/layout.tsx` — Root layout. Fonts (Playfair Display, Inter, Geist Mono) and CSS variables are configured here.
+- `/app/globals.css` — Tailwind v4 theme with design tokens (`surface-*`, `fg-*`, `accent-primary`).
+- `/app/gallery/page.tsx` — Gallery placeholder page (M1). Currently shows "Segera Hadir" message. Will be replaced.
+- `/components/landing/Navbar.tsx` — Landing page navbar (M1). Currently hardcoded for transparent/white style with scroll-to anchors. Will be refactored into a shared component with `variant` prop.
+- `/components/landing/Footer.tsx` — Landing page footer (M1). Uses anchor-based nav links (`#rooms`, `#gallery`) which won't work from `/gallery`. Links should be updated to proper routes when reused. Will be reused directly.
+- `/components/landing/GalleryPreview.tsx` — Landing page gallery preview (M1). Review how it links to `/gallery` and how it fetches/displays gallery items with fallback data.
+- `/components/ui/SectionHeader.tsx` — Reusable section header component with `dark` variant. Review for pattern consistency.
+- `/components/ui/WhatsAppButton.tsx` — (NEW) Shared UI component. Review for pattern reference.
+- `/lib/supabase/server.ts` — Server-side Supabase client using `@supabase/ssr` with cookie handling. Used for server component data fetching.
+- `/lib/supabase/client.ts` — Browser-side Supabase client using `@supabase/ssr`. Will be used for client-side filter/pagination queries.
+- `/lib/types.ts` — TypeScript interfaces (M1). `GalleryItem` is defined here (has `is_featured` but missing `alt_text`).
+- `/lib/whatsapp.ts` — WhatsApp URL helper. Review for pattern reference.
+- `/lib/gallery.ts` — (NEW) Data fetching functions for gallery items. Does not exist yet.
+- `/components/gallery/` — (NEW) Gallery component directory. Does not exist yet.
+- `/supabase/schema.sql` — Database schema (M1). The `gallery` table is defined here. Missing `alt_text` column.
+- `/supabase/seed.sql` — Seed data (M1). Contains only 5 gallery entries; needs expansion to 30-40 items for M2 testing.
+- `/next.config.ts` — Next.js config. Image remote patterns already configured for Unsplash and Supabase.
+- `/package.json` — Dependencies. No lightbox library installed yet; `yet-another-react-lightbox` will need to be added.
 - `/tasks/2026-04-03-m1-foundation-landing-page.md` — M1 PRD. Review for context on shared components and design tokens.
 
 ---
@@ -392,3 +403,81 @@ Refactor the Navbar into a single shared component that accepts a `variant` prop
 11. **Back-to-top button:** Nice-to-have, add if time permits.
 
 12. **Loading skeleton:** Use skeleton placeholders (gray boxes mimicking the grid layout) for a polished loading experience.
+
+---
+
+### 9. Task Breakdown
+
+#### Phase 1: Schema, Types, and Seed Data
+
+- [x] **1.1 Add `alt_text` column to the gallery table schema.** Update `/supabase/schema.sql` to add an `alt_text TEXT` column to the `gallery` table. This column stores accessible alt text for images/videos and should be nullable (fallback to title + category when empty).
+
+- [x] **1.2 Update the `GalleryItem` TypeScript interface.** In `/lib/types.ts`, add the `alt_text` field (type `string | null`) to the `GalleryItem` interface.
+
+- [x] **1.3 Expand seed data to 30-40 gallery items.** Update `/supabase/seed.sql` to contain 30-40 gallery entries across all categories (`kamar`, `fasilitas`, `lingkungan`) with a mix of `photo` and `video` media types. Include 2-3 items with `is_featured = true`. Use high-quality Unsplash placeholder URLs for photos and thumbnails. Each video entry should have a realistic `duration` value and a distinct `thumbnail_url`. Populate `alt_text` for all items. Ensure `sort_order` values are sequential. Keep the existing 5 entries and append new ones.
+
+#### Phase 2: Shared Navbar Refactor
+
+- [x] **2.1 Refactor Navbar into a shared component with variant support.** Move or refactor `/components/landing/Navbar.tsx` so it accepts a `variant` prop: `"transparent"` (current landing page behavior — white text, no background, absolute positioning, scroll-to anchors) and `"solid"` (gallery/inner page behavior — `surface-primary` background, `fg-primary` text, proper route-based links). For the `"solid"` variant: the logo "KostKu" links to `/`, nav links use `<Link>` with routes (`/` for Beranda, `/#rooms` for Kamar, `/#facilities` for Fasilitas, `/gallery` for Galeri, `/#contact` for Kontak), the active link is determined via `usePathname()` and highlighted with `accent-primary` color and semibold weight, and a "Hubungi Kami" CTA pill button is added on desktop. The mobile hamburger menu should work for both variants. Default variant should be `"transparent"` to avoid breaking the existing landing page.
+
+- [x] **2.2 Add "Beranda" to Navbar nav links for the solid variant.** The landing page Navbar omits "Beranda" from the links (since you're already on it), but the gallery page Navbar needs "Beranda" as the first link. Adjust the nav link list accordingly based on variant or current route.
+
+- [x] **2.3 Update the landing page to use the refactored Navbar.** Confirm that `/app/page.tsx` continues to work correctly with the refactored Navbar using `variant="transparent"` (or the default). No visual changes should occur on the landing page.
+
+- [x] **2.4 Update the gallery page to use the refactored Navbar.** In `/app/gallery/page.tsx`, use the Navbar with `variant="solid"` so it renders with the light background, dark text, route-based links, active state on "Galeri", and the CTA button.
+
+#### Phase 3: Gallery Data Fetching
+
+- [x] **3.1 Create gallery data fetching library.** Create `/lib/gallery.ts` with functions for fetching gallery data from Supabase. Include: (a) `getGalleryItems(category, offset, limit)` — fetches a paginated batch of gallery items, optionally filtered by category or media_type (for "Video" tab), returning both items and total count using `{ count: 'exact' }`. (b) `getGalleryCount(category)` — returns the total count of items for a given filter. Both functions should use the browser Supabase client (since they will be called from Client Components for pagination/filtering). Order results by `sort_order` ascending. Follow the existing fallback pattern (return fallback data if Supabase is unavailable).
+
+- [x] **3.2 Create server-side initial data fetch for gallery page.** Add a server-side function (either in `/lib/gallery.ts` or inline in the page server component) that uses the server Supabase client to fetch the initial batch of gallery items and total count for the SSR render. This should read the `category` search param to determine which filter to apply on first load. Follow the fallback pattern used in other M1 components (e.g., `GalleryPreview.tsx`, `Footer.tsx`).
+
+#### Phase 4: Gallery Page Components
+
+- [x] **4.1 Create the `GalleryHeader` component.** Create `/components/gallery/GalleryHeader.tsx` as a presentational component that renders: (a) Breadcrumb navigation ("Beranda > Galeri") with "Beranda" as a `<Link>` to `/` and mobile-specific styling with Lucide `home` and `chevron-right` icons. (b) Page title "Galeri Foto & Video" using Playfair Display. (c) Subtitle text using Inter. Apply the padding and typography specs from section 5.2 of the PRD for both desktop and mobile.
+
+- [x] **4.2 Create the `FilterTabs` component.** Create `/components/gallery/FilterTabs.tsx` as a Client Component that renders the five filter tabs (Semua, Kamar, Fasilitas, Lingkungan, Video) as horizontally arranged pill buttons. Active tab has `accent-primary` background with inverse text; inactive tabs have `surface-secondary` background. On mobile, the tab row should be horizontally scrollable with hidden scrollbars. Use `useSearchParams` to read and `useRouter` to update the `category` query parameter in the URL without full reload. Apply ARIA attributes: `role="tablist"` on the container and `role="tab"` with `aria-selected` on each tab. When a tab is clicked, emit an `onFilterChange` callback (or manage state via URL params) so the grid resets and re-fetches.
+
+- [x] **4.3 Create the `GalleryItem` component.** Create `/components/gallery/GalleryItem.tsx` as a component that renders a single gallery item (photo or video). For photos: render the image using Next.js `<Image>` with `object-cover`, rounded corners, and a category tag overlay pill at the bottom-left. For videos: render the thumbnail image with a dark scrim overlay. Featured/large videos show a centered play circle, title, and duration. Small/non-featured videos show a compact pill with play icon and "Video" text at the bottom-left. Accept props for `item`, `isFeatured` (layout size), and `onClick`. Use `alt_text` from the item (with fallback to `title`) for image alt attributes. The component should be focusable and keyboard-accessible (`role="button"`, `tabIndex={0}`, handle Enter/Space key).
+
+- [x] **4.4 Create the `GalleryGrid` component.** Create `/components/gallery/GalleryGrid.tsx` as a Client Component that manages the gallery state and renders the grid layout. Responsibilities: (a) Maintain state for displayed items array, current category filter, total count, page offset, and loading state. (b) Implement the desktop layout algorithm: walk through items and assign featured videos to 2-column spans with 1 regular item alongside, and place remaining items in 3-per-row arrangements. Use flex rows with `gap-5` and appropriate heights (320px standard, 380px featured). (c) Implement the mobile layout: featured videos span full width at 220px; regular items display in 2-column rows at 170px; occasional full-width photo items at 220px. (d) On filter change (from FilterTabs), reset items and offset, fetch the first batch for the new category using the client-side fetch function, and replace displayed items. (e) On "Load More" click, fetch the next batch and append to existing items. (f) Pass individual items to `GalleryItem` with correct `isFeatured` designation. (g) Track which photos (excluding videos) are in the current filtered set for lightbox navigation.
+
+- [x] **4.5 Install and configure `yet-another-react-lightbox`.** Add the `yet-another-react-lightbox` package (or chosen lightbox library) as a dependency. This library was chosen per open question #4 to save development time.
+
+- [x] **4.6 Create the `PhotoLightbox` component.** Create `/components/gallery/PhotoLightbox.tsx` as a Client Component wrapping the lightbox library. It should: (a) Accept the filtered list of photo items (videos excluded) and the index of the currently selected photo. (b) Display the selected photo in a fullscreen/near-fullscreen overlay with dark backdrop (`bg-black/90`). (c) Provide next/previous navigation via arrow buttons and keyboard arrow keys. (d) Support swipe gestures on mobile (left/right swipe to navigate). (e) Show a close button (X icon) in the top-right; close on Escape key or backdrop click. (f) Display a caption (category tag or title) at the bottom and a position indicator ("3 / 20"). (g) Lock body scroll while open (`overflow: hidden` on body). (h) Use a simple fade-in animation for opening. (i) Trap keyboard focus inside the lightbox for accessibility.
+
+- [x] **4.7 Create the `VideoPlayer` component.** Create `/components/gallery/VideoPlayer.tsx` as a Client Component that renders a modal video player. It should: (a) Open as a fixed-position overlay with dark backdrop, similar to the lightbox. (b) Center a native HTML5 `<video>` element with the `controls` attribute and `poster` set to the video's `thumbnail_url`. (c) Do NOT autoplay — the user must press play. (d) Include a close button (X icon) in the top-right; close on Escape key. (e) Lock body scroll while open. (f) On mobile, consider requesting fullscreen via the Fullscreen API when the user presses play.
+
+- [x] **4.8 Create the `LoadMoreButton` component.** Create `/components/gallery/LoadMoreButton.tsx` as a Client Component that renders: (a) A count label "Menampilkan X dari Y foto & video" centered above the button, using `aria-live="polite"` so screen readers announce count updates. (b) A "Muat Lebih Banyak" pill button with `accent-primary` background, inverse text, and a Lucide `chevron-down` icon. (c) A loading state that replaces the chevron with a spinner and/or changes text to "Memuat..." while fetching. (d) When all items are loaded, hide the button or show "Semua item telah dimuat" message. Accept props for `displayedCount`, `totalCount`, `isLoading`, and `onLoadMore` callback.
+
+#### Phase 5: Page Assembly
+
+- [x] **5.1 Assemble the full gallery page.** Rewrite `/app/gallery/page.tsx` as a Server Component that: (a) Reads the `category` search param from the page props (`searchParams`). (b) Fetches the initial batch of gallery items and total count server-side using the server Supabase client, applying the category filter if present. (c) Sets page metadata (title: "Galeri - KostKu", description about gallery). (d) Renders the page structure: Navbar (solid variant) at top, GalleryHeader with breadcrumb/title/subtitle, FilterTabs with the initial active category, GalleryGrid with initial items/count, and Footer at bottom. (e) Passes initial data as props to the Client Components to avoid a loading flash on first render.
+
+- [x] **5.2 Create a loading skeleton for the gallery page.** Add skeleton placeholder UI (gray boxes mimicking the grid layout) that displays while the gallery data is loading on filter changes or initial hydration. This can be a `GallerySkeleton` component or inline skeleton states within `GalleryGrid`. Match the grid dimensions (3-col desktop / 2-col mobile) with animated pulse placeholders.
+
+- [x] **5.3 Configure image optimization for gallery items.** Ensure all `<Image>` components in gallery items use appropriate `sizes` attributes: `"(min-width: 1024px) 33vw, 50vw"` for standard items, `"(min-width: 1024px) 66vw, 100vw"` for featured/2-col items, and `"100vw"` for mobile full-width items. Apply `loading="lazy"` by default and `priority={true}` for items in the first visible row.
+
+#### Phase 6: Footer Navigation Fix
+
+- [x] **6.1 Update Footer navigation links to work across pages.** The Footer in `/components/landing/Footer.tsx` currently uses anchor links (`#rooms`, `#gallery`) which only work on the landing page. Update the "Navigasi" links to use proper routes that work from any page: "Beranda" should link to `/`, "Kamar" to `/#rooms`, "Fasilitas" to `/#facilities`, "Galeri" to `/gallery`. Use Next.js `<Link>` components for client-side navigation.
+
+#### Phase 7: Testing and Polish
+
+- [x] **7.1 Verify the gallery page renders correctly at desktop (1440px) and mobile (390px) breakpoints.** Compare against the design file frames. Check spacing, typography sizes, color tokens, rounded corners, and grid layout at both widths. Verify the Navbar solid variant matches the design (height, link styles, CTA button).
+
+- [x] **7.2 Test filter tabs behavior.** Verify that clicking each tab (Semua, Kamar, Fasilitas, Lingkungan, Video) filters the grid correctly. Confirm the URL updates with the `category` query parameter. Test direct-linking to a filtered URL (e.g., `/gallery?category=kamar`) and verify it renders the correct filter on page load. Confirm grid resets to page 1 when switching tabs.
+
+- [x] **7.3 Test the photo lightbox.** Open photos in the lightbox and verify: navigation with arrow buttons, keyboard arrows, and mobile swipe. Verify the position indicator updates correctly. Confirm the lightbox only cycles through photos matching the current filter (no videos). Test Escape to close and backdrop click to close. Verify body scroll is locked.
+
+- [x] **7.4 Test the video player.** Click video items and verify the modal opens with the correct video. Confirm the poster/thumbnail shows while loading. Verify standard playback controls work. Confirm the video does NOT autoplay. Test close button and Escape key.
+
+- [x] **7.5 Test Load More pagination.** Verify the initial batch loads correctly. Click "Muat Lebih Banyak" and confirm new items append below existing ones. Verify the count label updates ("Menampilkan X dari Y"). Confirm the button disappears or shows "all loaded" message when all items are fetched. Test that Load More respects the current filter tab.
+
+- [x] **7.6 Test fallback behavior without Supabase.** Temporarily disconnect from Supabase (e.g., remove env vars) and verify the page still renders with fallback data. The page should not crash or show blank content.
+
+- [x] **7.7 Verify accessibility.** Check that filter tabs have proper ARIA roles (`tablist`, `tab`, `aria-selected`). Verify gallery items are keyboard-navigable (focusable, activatable with Enter/Space). Confirm the lightbox traps focus and supports keyboard navigation. Verify the count label has `aria-live="polite"`. Run a basic accessibility audit (e.g., Lighthouse or axe).
+
+- [x] **7.8 Verify Navbar and Footer consistency.** Confirm the landing page Navbar still looks and functions identically after the refactor (no regressions). Confirm the Footer renders correctly on both the landing page and gallery page, with working navigation links from both pages.
+
+- [x] **7.9 Performance check.** Verify images use lazy loading below the fold and priority loading above the fold. Confirm the initial page load only fetches one batch (not all gallery items). Check that no videos are preloaded. Run Lighthouse and aim for good Core Web Vitals scores.
