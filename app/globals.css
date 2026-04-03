@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-primary: #F5F2E9;
+  --color-surface-secondary: #E8E4D8;
+  --color-surface-inverse: #2D2926;
+  --color-fg-primary: #2D2926;
+  --color-fg-secondary: #5E5954;
+  --color-fg-muted: #8C8782;
+  --color-fg-inverse: #F5F2E9;
+  --color-accent-primary: #7D6B3D;
+}
