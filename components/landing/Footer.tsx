@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AtSign, Globe, Send } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 
@@ -41,10 +42,10 @@ async function getFooterContact(): Promise<FooterContact> {
 }
 
 const navLinks = [
-  { label: "Beranda", href: "#" },
-  { label: "Kamar", href: "#rooms" },
-  { label: "Fasilitas", href: "#facilities" },
-  { label: "Galeri", href: "#gallery" },
+  { label: "Beranda", href: "/" },
+  { label: "Kamar", href: "/#rooms" },
+  { label: "Fasilitas", href: "/#facilities" },
+  { label: "Galeri", href: "/gallery" },
 ];
 
 const infoLinks = [
@@ -86,13 +87,13 @@ export default async function Footer() {
                 Navigasi
               </h4>
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   className="font-[family-name:var(--font-body)] text-sm text-fg-muted hover:text-fg-inverse transition-colors"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
 

@@ -27,6 +27,7 @@ CREATE TABLE gallery (
   category TEXT,
   duration TEXT,
   is_featured BOOLEAN DEFAULT FALSE,
+  alt_text TEXT,
   sort_order INTEGER,
   created_at TIMESTAMPTZ DEFAULT now()
 );

@@ -23,6 +23,7 @@ export interface GalleryItem {
   category: string;
   duration: string;
   is_featured: boolean;
+  alt_text: string | null;
   sort_order: number;
   created_at: string;
 }
