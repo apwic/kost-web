@@ -7,6 +7,8 @@ import { Menu, X } from "lucide-react";
 
 interface NavbarProps {
   variant?: "transparent" | "solid";
+  siteName?: string;
+  logoUrl?: string;
 }
 
 const LANDING_LINKS = [
@@ -24,7 +26,7 @@ const PAGE_LINKS = [
   { label: "Kontak", href: "/#contact" },
 ];
 
-export default function Navbar({ variant = "transparent" }: NavbarProps) {
+export default function Navbar({ variant = "transparent", siteName = "Nama Kost", logoUrl }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const isSolid = variant === "solid";
@@ -59,7 +61,11 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
             isSolid ? "text-fg-primary" : "text-white"
           }`}
         >
-          KostKu
+          {logoUrl ? (
+            <img src={logoUrl} alt={siteName} className="h-8 w-auto" />
+          ) : (
+            siteName
+          )}
         </Link>
 
         {/* Desktop links */}

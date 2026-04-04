@@ -7,27 +7,29 @@ import GalleryGrid from "@/components/gallery/GalleryGrid";
 import { createClient } from "@/lib/supabase/server";
 import { BATCH_SIZE, type GalleryCategory } from "@/lib/gallery";
 import { buildBreadcrumbJsonLd } from "@/lib/jsonld";
+import { getSiteSettings } from "@/lib/settings";
 import type { GalleryItem } from "@/lib/types";
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://kostku.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
 
 export async function generateMetadata(): Promise<Metadata> {
+  const settings = await getSiteSettings();
+  const title = `Galeri | ${settings.site_name} — Kost Modern di ${settings.city}`;
+  const description = `Jelajahi galeri foto dan video ${settings.site_name}. Lihat kamar modern, fasilitas lengkap, dan lingkungan nyaman kost kami di ${settings.city}.`;
+
   return {
-    title: "Galeri | KostKu — Kost Modern di Jakarta",
-    description:
-      "Jelajahi galeri foto dan video KostKu. Lihat kamar modern, fasilitas lengkap, dan lingkungan nyaman kost kami di Jakarta.",
+    title,
+    description,
     openGraph: {
-      title: "Galeri | KostKu — Kost Modern di Jakarta",
-      description:
-        "Jelajahi galeri foto dan video KostKu. Lihat kamar modern, fasilitas lengkap, dan lingkungan nyaman kost kami di Jakarta.",
+      title,
+      description,
       images: [{ url: `${siteUrl}/og-gallery.jpg` }],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Galeri | KostKu — Kost Modern di Jakarta",
-      description:
-        "Jelajahi galeri foto dan video KostKu. Lihat kamar modern, fasilitas lengkap, dan lingkungan nyaman kost kami di Jakarta.",
+      title,
+      description,
     },
   };
 }
@@ -39,7 +41,7 @@ const FALLBACK_ITEMS: GalleryItem[] = [
   { id: "4", title: "Area Parkir Luas", media_type: "photo", media_url: "https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=1200&q=80", thumbnail_url: "", category: "fasilitas", duration: "", is_featured: false, alt_text: "Area parkir luas", sort_order: 4, created_at: "" },
   { id: "5", title: "Dapur Bersama", media_type: "photo", media_url: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80", thumbnail_url: "", category: "fasilitas", duration: "", is_featured: false, alt_text: "Dapur bersama", sort_order: 5, created_at: "" },
   { id: "6", title: "Lingkungan Asri", media_type: "photo", media_url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80", thumbnail_url: "", category: "lingkungan", duration: "", is_featured: false, alt_text: "Lingkungan asri", sort_order: 6, created_at: "" },
-  { id: "7", title: "Tur Virtual KostKu", media_type: "video", media_url: "/videos/tur-kostku.mp4", thumbnail_url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&q=80", category: "kamar", duration: "3:45", is_featured: true, alt_text: "Video tur virtual KostKu", sort_order: 7, created_at: "" },
+  { id: "7", title: "Tur Virtual Kost", media_type: "video", media_url: "/videos/tur-kost.mp4", thumbnail_url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&q=80", category: "kamar", duration: "3:45", is_featured: true, alt_text: "Video tur virtual kost", sort_order: 7, created_at: "" },
   { id: "8", title: "Tampak Depan Kost", media_type: "photo", media_url: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80", thumbnail_url: "", category: "lingkungan", duration: "", is_featured: false, alt_text: "Tampak depan kost", sort_order: 8, created_at: "" },
   { id: "9", title: "Rooftop Lounge", media_type: "photo", media_url: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80", thumbnail_url: "", category: "fasilitas", duration: "", is_featured: false, alt_text: "Area rooftop", sort_order: 9, created_at: "" },
   { id: "10", title: "Taman Kost", media_type: "photo", media_url: "https://images.unsplash.com/photo-1558036117-15d82a90b9b1?w=1200&q=80", thumbnail_url: "", category: "lingkungan", duration: "", is_featured: false, alt_text: "Taman kost", sort_order: 10, created_at: "" },
@@ -96,7 +98,10 @@ export default async function GalleryPage({
     ? (rawCategory as GalleryCategory)
     : "semua";
 
-  const { items, count } = await getInitialGalleryData(category);
+  const [{ items, count }, settings] = await Promise.all([
+    getInitialGalleryData(category),
+    getSiteSettings(),
+  ]);
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: "Beranda", url: siteUrl },
@@ -109,7 +114,7 @@ export default async function GalleryPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <Navbar variant="solid" />
+      <Navbar variant="solid" siteName={settings.site_name} logoUrl={settings.logo_url} />
       <GalleryHeader />
       <Suspense>
         <GalleryGrid
@@ -118,7 +123,16 @@ export default async function GalleryPage({
           initialCategory={category}
         />
       </Suspense>
-      <Footer />
+      <Footer
+        siteName={settings.site_name}
+        logoUrl={settings.logo_url}
+        email={settings.email}
+        phone={settings.phone_number}
+        address={settings.address}
+        instagramUrl={settings.instagram_url}
+        facebookUrl={settings.facebook_url}
+        tiktokUrl={settings.tiktok_url}
+      />
     </main>
   );
 }

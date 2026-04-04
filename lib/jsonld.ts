@@ -1,62 +1,31 @@
-import type { SiteSetting } from "@/lib/types";
-
-interface LocalBusinessSettings {
-  kost_name?: string;
-  address?: string;
-  phone?: string;
-  price_range?: string;
-  latitude?: string;
-  longitude?: string;
-  image_url?: string;
-}
-
-function getSettingValue(
-  settings: SiteSetting[],
-  key: string,
-  fallback: string
-): string {
-  const found = settings.find((s) => s.key === key);
-  return found?.value || fallback;
-}
+import type { SiteSettings } from "@/lib/types";
 
 export function buildLocalBusinessJsonLd(
-  settings: SiteSetting[],
+  settings: SiteSettings,
   avgRating: number,
   reviewCount: number
 ) {
-  const name = getSettingValue(settings, "kost_name", "KostKu");
-  const address = getSettingValue(
-    settings,
-    "address",
-    "Jakarta Selatan, DKI Jakarta"
-  );
-  const phone = getSettingValue(settings, "phone", "+62-XXX-XXXX-XXXX");
-  const priceRange = getSettingValue(settings, "price_range", "Rp 1.500.000 - Rp 3.500.000");
-  const latitude = getSettingValue(settings, "latitude", "-6.2088");
-  const longitude = getSettingValue(settings, "longitude", "106.8456");
-  const imageUrl = getSettingValue(settings, "hero_image_url", "");
-
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name,
+    name: settings.site_name,
     address: {
       "@type": "PostalAddress",
-      streetAddress: address,
-      addressLocality: "Jakarta",
+      streetAddress: settings.address,
+      addressLocality: settings.city,
       addressCountry: "ID",
     },
-    telephone: phone,
+    telephone: settings.phone_number,
     geo: {
       "@type": "GeoCoordinates",
-      latitude: parseFloat(latitude),
-      longitude: parseFloat(longitude),
+      latitude: parseFloat(settings.latitude) || -6.2088,
+      longitude: parseFloat(settings.longitude) || 106.8456,
     },
-    priceRange,
+    priceRange: "$$",
   };
 
-  if (imageUrl) {
-    jsonLd.image = imageUrl;
+  if (settings.hero_image_url) {
+    jsonLd.image = settings.hero_image_url;
   }
 
   if (reviewCount > 0) {

@@ -37,7 +37,12 @@ function isActive(pathname: string, href: string) {
   return pathname.startsWith(href);
 }
 
-export function AdminShell({ children }: { children: React.ReactNode }) {
+interface AdminShellProps {
+  children: React.ReactNode;
+  siteName?: string;
+}
+
+export function AdminShell({ children, siteName = "Admin" }: AdminShellProps) {
   const pathname = usePathname();
   const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -74,7 +79,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
             href="/admin"
             className="font-[family-name:var(--font-heading)] text-lg text-fg-inverse"
           >
-            KostKu
+            {siteName}
           </Link>
           <button
             onClick={() => setSidebarOpen(false)}
@@ -133,7 +138,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
             <Menu size={24} />
           </button>
           <span className="ml-4 font-[family-name:var(--font-heading)] text-lg text-fg-primary">
-            KostKu
+            {siteName}
           </span>
         </header>
 

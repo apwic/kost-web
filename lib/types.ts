@@ -54,3 +54,25 @@ export interface SiteSetting {
   value: string;
   updated_at: string;
 }
+
+export interface SiteSettings {
+  site_name: string;
+  phone_number: string;
+  whatsapp_number: string;
+  email: string;
+  address: string;
+  city: string;
+  hero_headline: string;
+  hero_subtitle: string;
+  hero_image_url: string;
+  whatsapp_greeting: string;
+  latitude: string;
+  longitude: string;
+  maps_embed_url: string;
+  ga_measurement_id: string;
+  logo_url: string;
+  seo_description: string;
+  instagram_url: string;
+  facebook_url: string;
+  tiktok_url: string;
+}

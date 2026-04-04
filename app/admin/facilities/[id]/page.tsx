@@ -3,7 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import type { Facility } from "@/lib/types";
 import FacilityForm from "@/components/admin/FacilityForm";
 
-export const metadata = { title: "Edit Fasilitas - Admin KostKu" };
+export const metadata = { title: "Edit Fasilitas" };
 
 export default async function EditFacilityPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;

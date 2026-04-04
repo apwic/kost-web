@@ -1,6 +1,6 @@
 import TestimonialForm from "@/components/admin/TestimonialForm";
 
-export const metadata = { title: "Tambah Testimoni - Admin KostKu" };
+export const metadata = { title: "Tambah Testimoni" };
 
 export default function NewTestimonialPage() {
   return (

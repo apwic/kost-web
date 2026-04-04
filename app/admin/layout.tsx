@@ -1,13 +1,22 @@
+import type { Metadata } from "next";
 import { AdminShell } from "@/components/admin/AdminShell";
+import { getSiteSettings } from "@/lib/settings";
 
-export const metadata = {
-  title: "KostKu Admin",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const settings = await getSiteSettings();
+  return {
+    title: {
+      template: `%s - Admin ${settings.site_name}`,
+      default: `Admin ${settings.site_name}`,
+    },
+  };
+}
 
-export default function AdminLayout({
+export default async function AdminLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <AdminShell>{children}</AdminShell>;
+  const settings = await getSiteSettings();
+  return <AdminShell siteName={settings.site_name}>{children}</AdminShell>;
 }

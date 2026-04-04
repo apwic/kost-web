@@ -1,4 +1,4 @@
--- KostKu Database Schema
+-- Kost Website Template — Database Schema
 
 -- Rooms table
 CREATE TABLE rooms (

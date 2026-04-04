@@ -13,10 +13,10 @@ interface ContactInfo {
 }
 
 const fallbackContact: ContactInfo = {
-  phone: "+62 812 3456 7890",
-  whatsapp: "6281234567890",
-  address: "Jl. Merdeka No. 45, Jakarta Selatan",
-  greeting: "Halo, saya tertarik dengan KostKu. Bisa info lebih lanjut?",
+  phone: "+62 xxx xxxx xxxx",
+  whatsapp: "",
+  address: "Alamat kost Anda",
+  greeting: "Halo, saya tertarik dengan kost Anda. Bisa info lebih lanjut?",
   latitude: "-6.2088",
   longitude: "106.8456",
 };

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://kostku.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [

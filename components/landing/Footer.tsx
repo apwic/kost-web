@@ -1,44 +1,15 @@
 import Link from "next/link";
-import { AtSign, Globe, Send } from "lucide-react";
-import { createClient } from "@/lib/supabase/server";
+import { AtSign, Globe, Music2 } from "lucide-react";
 
-interface FooterContact {
-  phone: string;
-  email: string;
-  address1: string;
-  address2: string;
-}
-
-const fallbackContact: FooterContact = {
-  phone: "+62 812 3456 7890",
-  email: "info@kostku.com",
-  address1: "Jl. Merdeka No. 45",
-  address2: "Jakarta Selatan",
-};
-
-async function getFooterContact(): Promise<FooterContact> {
-  try {
-    const supabase = await createClient();
-    const { data } = await supabase
-      .from("site_settings")
-      .select("key, value")
-      .in("key", ["phone_number", "email", "address"]);
-
-    if (data && data.length > 0) {
-      const settings = Object.fromEntries(data.map((s) => [s.key, s.value]));
-      const address = settings.address || "Jl. Merdeka No. 45, Jakarta Selatan";
-      const parts = address.split(",").map((s: string) => s.trim());
-      return {
-        phone: settings.phone_number || fallbackContact.phone,
-        email: settings.email || fallbackContact.email,
-        address1: parts[0] || fallbackContact.address1,
-        address2: parts[1] || fallbackContact.address2,
-      };
-    }
-  } catch {
-    // Use fallback
-  }
-  return fallbackContact;
+interface FooterProps {
+  siteName?: string;
+  logoUrl?: string;
+  email?: string;
+  phone?: string;
+  address?: string;
+  instagramUrl?: string;
+  facebookUrl?: string;
+  tiktokUrl?: string;
 }
 
 const navLinks = [
@@ -55,14 +26,25 @@ const infoLinks = [
   { label: "FAQ", href: "#" },
 ];
 
-const socialLinks = [
-  { icon: AtSign, href: "#", label: "Instagram" },
-  { icon: Globe, href: "#", label: "Facebook" },
-  { icon: Send, href: "#", label: "Twitter" },
-];
+export default function Footer({
+  siteName = "Nama Kost",
+  logoUrl,
+  email = "info@namakost.com",
+  phone = "+62 xxx xxxx xxxx",
+  address = "Alamat kost Anda",
+  instagramUrl = "",
+  facebookUrl = "",
+  tiktokUrl = "",
+}: FooterProps) {
+  const addressParts = address.split(",").map((s: string) => s.trim());
+  const address1 = addressParts[0] || address;
+  const address2 = addressParts.slice(1).join(", ") || "";
 
-export default async function Footer() {
-  const contact = await getFooterContact();
+  const socialLinks = [
+    { icon: AtSign, href: instagramUrl, label: "Instagram" },
+    { icon: Globe, href: facebookUrl, label: "Facebook" },
+    { icon: Music2, href: tiktokUrl, label: "TikTok" },
+  ].filter((link) => link.href);
 
   return (
     <footer className="bg-surface-inverse py-12 px-6 lg:px-[120px]">
@@ -72,7 +54,11 @@ export default async function Footer() {
           {/* Brand */}
           <div className="lg:max-w-[300px]">
             <h3 className="font-[family-name:var(--font-heading)] text-[28px] font-bold text-fg-inverse mb-4">
-              KostKu
+              {logoUrl ? (
+                <img src={logoUrl} alt={siteName} className="h-8 w-auto" />
+              ) : (
+                siteName
+              )}
             </h3>
             <p className="font-[family-name:var(--font-body)] text-sm text-fg-muted leading-relaxed">
               Kost modern dengan fasilitas lengkap untuk kenyamanan Anda. Lokasi strategis dan harga terjangkau.
@@ -119,17 +105,19 @@ export default async function Footer() {
                 Kontak
               </h4>
               <span className="font-[family-name:var(--font-body)] text-sm text-fg-muted">
-                {contact.phone}
+                {phone}
               </span>
               <span className="font-[family-name:var(--font-body)] text-sm text-fg-muted">
-                {contact.email}
+                {email}
               </span>
               <span className="font-[family-name:var(--font-body)] text-sm text-fg-muted">
-                {contact.address1}
+                {address1}
               </span>
-              <span className="font-[family-name:var(--font-body)] text-sm text-fg-muted">
-                {contact.address2}
-              </span>
+              {address2 && (
+                <span className="font-[family-name:var(--font-body)] text-sm text-fg-muted">
+                  {address2}
+                </span>
+              )}
             </div>
           </div>
         </div>
@@ -140,7 +128,7 @@ export default async function Footer() {
         {/* Bottom */}
         <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
           <span className="font-[family-name:var(--font-body)] text-[13px] text-fg-muted">
-            © 2026 KostKu. Hak cipta dilindungi.
+            © {new Date().getFullYear()} {siteName}. Hak cipta dilindungi.
           </span>
           <div className="flex items-center gap-4">
             {socialLinks.map(({ icon: Icon, href, label }) => (

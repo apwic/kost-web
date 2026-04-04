@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { getSiteSettings } from "@/lib/settings";
 
 const playfairDisplay = Playfair_Display({
   weight: "700",
@@ -23,22 +24,24 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://kostku.vercel.app"
-  ),
-  title: "KostKu — Kost Modern di Jakarta",
-  description:
-    "Kost modern dengan fasilitas lengkap, lokasi strategis, dan harga terjangkau.",
-  openGraph: {
-    siteName: "KostKu",
-    locale: "id_ID",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const settings = await getSiteSettings();
+  return {
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_SITE_URL || "https://example.com"
+    ),
+    title: `${settings.site_name} — Kost Modern di ${settings.city}`,
+    description: settings.seo_description,
+    openGraph: {
+      siteName: settings.site_name,
+      locale: "id_ID",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+    },
+  };
+}
 
 export default function RootLayout({
   children,

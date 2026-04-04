@@ -1,4 +1,4 @@
--- KostKu Seed Data
+-- Kost Website Template — Seed Data
 
 -- Rooms
 INSERT INTO rooms (name, slug, price, price_label, description, image_url, amenities, is_available, sort_order, total_units, available_units) VALUES
@@ -88,10 +88,10 @@ INSERT INTO gallery (title, media_type, media_url, thumbnail_url, category, dura
 ('Teras Depan', 'photo', 'https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1200&q=80', 'https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=400&q=80', 'lingkungan', NULL, false, 'Teras depan kost yang nyaman', 28),
 
 -- Videos (5 items)
-('Tur Virtual KostKu', 'video', '/videos/tur-kostku.mp4', 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&q=80', 'kamar', '3:45', true, 'Video tur virtual seluruh area KostKu', 29),
+('Tur Virtual Kost', 'video', '/videos/tur-kost.mp4', 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&q=80', 'kamar', '3:45', true, 'Video tur virtual seluruh area kost', 29),
 ('Video Tur Kamar Standard', 'video', '/videos/tur-standard.mp4', 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&q=80', 'kamar', '2:15', false, 'Video tur kamar standard', 30),
 ('Video Tur Kamar Deluxe', 'video', '/videos/tur-deluxe.mp4', 'https://images.unsplash.com/photo-1540518614846-7eded433c457?w=400&q=80', 'kamar', '2:45', true, 'Video tur kamar deluxe dengan fasilitas lengkap', 31),
-('Review Penghuni KostKu', 'video', '/videos/review-penghuni.mp4', 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&q=80', 'lingkungan', '2:30', false, 'Video review dari penghuni kost', 32),
+('Review Penghuni', 'video', '/videos/review-penghuni.mp4', 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&q=80', 'lingkungan', '2:30', false, 'Video review dari penghuni kost', 32),
 ('Tur Fasilitas Bersama', 'video', '/videos/tur-fasilitas.mp4', 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=400&q=80', 'fasilitas', '4:10', false, 'Video tur fasilitas bersama kost', 33);
 
 -- Testimonials
@@ -99,7 +99,7 @@ INSERT INTO testimonials (name, role, quote, rating, avatar_url, is_visible, sor
 (
   'Aisyah Putri',
   'Mahasiswi',
-  'Saya sudah tinggal di KostKu selama 2 tahun dan sangat puas. Fasilitasnya lengkap, lingkungannya aman, dan pemiliknya sangat ramah. WiFi-nya juga kencang, cocok banget buat kuliah online!',
+  'Saya sudah tinggal di sini selama 2 tahun dan sangat puas. Fasilitasnya lengkap, lingkungannya aman, dan pemiliknya sangat ramah. WiFi-nya juga kencang, cocok banget buat kuliah online!',
   5,
   'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80',
   true,
@@ -108,7 +108,7 @@ INSERT INTO testimonials (name, role, quote, rating, avatar_url, is_visible, sor
 (
   'Budi Santoso',
   'Karyawan',
-  'Lokasi KostKu sangat strategis, dekat dengan kantor dan pusat perbelanjaan. Kamarnya bersih dan nyaman. Harga juga sangat bersahabat untuk fasilitas yang didapat. Recommended banget!',
+  'Lokasinya sangat strategis, dekat dengan kantor dan pusat perbelanjaan. Kamarnya bersih dan nyaman. Harga juga sangat bersahabat untuk fasilitas yang didapat. Recommended banget!',
   5,
   'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80',
   true,
@@ -117,7 +117,7 @@ INSERT INTO testimonials (name, role, quote, rating, avatar_url, is_visible, sor
 (
   'Citra Dewi',
   'Profesional',
-  'Sebagai profesional yang butuh tempat tinggal nyaman, KostKu adalah pilihan terbaik. Kamar Premium-nya seperti apartemen mini. AC-nya dingin, kamar mandinya bersih, dan ada balkon pribadi juga!',
+  'Sebagai profesional yang butuh tempat tinggal nyaman, kost ini adalah pilihan terbaik. Kamar Premium-nya seperti apartemen mini. AC-nya dingin, kamar mandinya bersih, dan ada balkon pribadi juga!',
   5,
   'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80',
   true,
@@ -125,17 +125,24 @@ INSERT INTO testimonials (name, role, quote, rating, avatar_url, is_visible, sor
 );
 
 -- Site Settings
+-- Update these values with your own kost business information
 INSERT INTO site_settings (key, value) VALUES
-('whatsapp_number', '6281234567890'),
-('phone_number', '+62 812 3456 7890'),
-('address', 'Jl. Merdeka No. 45 Jakarta Selatan'),
-('email', 'info@kostku.com'),
-('site_name', 'KostKu'),
+('site_name', 'Nama Kost Anda'),
+('phone_number', '+62 xxx xxxx xxxx'),
+('whatsapp_number', '62xxxxxxxxxxx'),
+('email', 'info@namakost.com'),
+('address', 'Jl. Contoh No. 1, Kota Anda'),
+('city', 'Jakarta'),
 ('hero_image_url', 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80'),
-('hero_headline', 'Kost Modern di Jantung Jakarta'),
-('hero_subtitle', 'Nikmati hunian nyaman dengan fasilitas lengkap, lokasi strategis, dan harga terjangkau. KostKu — rumah kedua Anda di Jakarta.'),
-('whatsapp_greeting', 'Halo KostKu! Saya tertarik untuk mengetahui lebih lanjut tentang kamar yang tersedia.'),
+('hero_headline', 'Kost Modern untuk Hunian Anda'),
+('hero_subtitle', 'Hunian nyaman dengan fasilitas lengkap, lokasi strategis, dan harga terjangkau.'),
+('whatsapp_greeting', 'Halo, saya tertarik dengan kost Anda. Bisa info lebih lanjut?'),
 ('latitude', '-6.2088'),
 ('longitude', '106.8456'),
-('maps_embed_url', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.84513!3d-6.2088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMzEuNyJTIDEwNsKwNTAnNDIuNSJF!5e0!3m2!1sid!2sid!4v1'),
-('ga_measurement_id', '');
+('maps_embed_url', ''),
+('ga_measurement_id', ''),
+('logo_url', ''),
+('seo_description', 'Kost modern dengan fasilitas lengkap, lokasi strategis, dan harga terjangkau.'),
+('instagram_url', ''),
+('facebook_url', ''),
+('tiktok_url', '');

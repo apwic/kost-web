@@ -1,7 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import SettingsForm from "@/components/admin/SettingsForm";
 
-export const metadata = { title: "Pengaturan Situs - Admin KostKu" };
+export const metadata = { title: "Pengaturan Situs" };
 
 export default async function SettingsPage() {
   const supabase = await createClient();

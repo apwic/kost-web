@@ -1,6 +1,6 @@
 import FacilityForm from "@/components/admin/FacilityForm";
 
-export const metadata = { title: "Tambah Fasilitas - Admin KostKu" };
+export const metadata = { title: "Tambah Fasilitas" };
 
 export default function NewFacilityPage() {
   return (

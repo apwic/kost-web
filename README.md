@@ -1,4 +1,4 @@
-# KostKu — Kost Modern Website Template
+# Kost Website Template
 
 A template for building a marketing website for Kost (Indonesian boarding house) businesses. Built with Next.js, Tailwind CSS, and Supabase.
 

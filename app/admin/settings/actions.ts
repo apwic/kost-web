@@ -9,10 +9,20 @@ const SETTING_KEYS = [
   "whatsapp_number",
   "email",
   "address",
+  "city",
   "hero_headline",
   "hero_subtitle",
   "hero_image_url",
   "whatsapp_greeting",
+  "latitude",
+  "longitude",
+  "maps_embed_url",
+  "ga_measurement_id",
+  "logo_url",
+  "seo_description",
+  "instagram_url",
+  "facebook_url",
+  "tiktok_url",
 ];
 
 export async function updateSettings(formData: FormData) {
@@ -32,5 +42,6 @@ export async function updateSettings(formData: FormData) {
   }
 
   revalidatePath("/");
+  revalidatePath("/gallery");
   revalidatePath("/admin/settings");
 }

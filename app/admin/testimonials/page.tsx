@@ -3,7 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import type { Testimonial } from "@/lib/types";
 import TestimonialList from "@/components/admin/TestimonialList";
 
-export const metadata = { title: "Kelola Testimoni - Admin KostKu" };
+export const metadata = { title: "Kelola Testimoni" };
 
 export default async function TestimonialsPage() {
   const supabase = await createClient();

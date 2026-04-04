@@ -2,11 +2,13 @@ import Link from "next/link";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { SearchX } from "lucide-react";
+import { getSiteSettings } from "@/lib/settings";
 
-export default function NotFound() {
+export default async function NotFound() {
+  const settings = await getSiteSettings();
   return (
     <div className="min-h-screen bg-surface-primary text-fg-primary flex flex-col">
-      <Navbar variant="solid" />
+      <Navbar variant="solid" siteName={settings.site_name} logoUrl={settings.logo_url} />
       <main className="flex-1 flex items-center justify-center px-6 py-20">
         <div className="text-center max-w-md">
           <div className="flex justify-center mb-6">
@@ -28,7 +30,16 @@ export default function NotFound() {
           </Link>
         </div>
       </main>
-      <Footer />
+      <Footer
+        siteName={settings.site_name}
+        logoUrl={settings.logo_url}
+        email={settings.email}
+        phone={settings.phone_number}
+        address={settings.address}
+        instagramUrl={settings.instagram_url}
+        facebookUrl={settings.facebook_url}
+        tiktokUrl={settings.tiktok_url}
+      />
     </div>
   );
 }

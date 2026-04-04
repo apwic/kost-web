@@ -3,7 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import type { Facility } from "@/lib/types";
 import FacilityList from "@/components/admin/FacilityList";
 
-export const metadata = { title: "Kelola Fasilitas - Admin KostKu" };
+export const metadata = { title: "Kelola Fasilitas" };
 
 export default async function FacilitiesPage() {
   const supabase = await createClient();

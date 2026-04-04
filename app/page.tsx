@@ -9,63 +9,34 @@ import ContactCTA from "@/components/landing/ContactCTA";
 import Footer from "@/components/landing/Footer";
 import { createClient } from "@/lib/supabase/server";
 import { buildLocalBusinessJsonLd } from "@/lib/jsonld";
-import type { SiteSetting, Testimonial } from "@/lib/types";
+import { getSiteSettings } from "@/lib/settings";
+import type { Testimonial } from "@/lib/types";
 
 export async function generateMetadata(): Promise<Metadata> {
-  let heroImageUrl = "";
-
-  try {
-    const supabase = await createClient();
-    const { data } = await supabase
-      .from("site_settings")
-      .select("key, value, updated_at")
-      .eq("key", "hero_image_url")
-      .single();
-    if (data?.value) {
-      heroImageUrl = data.value;
-    }
-  } catch {
-    // Use fallback without OG image
-  }
-
-  const images = heroImageUrl ? [{ url: heroImageUrl }] : [];
+  const settings = await getSiteSettings();
+  const title = `${settings.site_name} — Kost Modern di ${settings.city}`;
+  const description = settings.seo_description;
+  const images = settings.hero_image_url ? [{ url: settings.hero_image_url }] : [];
 
   return {
-    title: "KostKu — Kost Modern di Jakarta",
-    description:
-      "Temukan kost modern di Jakarta dengan fasilitas lengkap, lokasi strategis, keamanan 24 jam, dan harga terjangkau. Booking sekarang!",
-    openGraph: {
-      title: "KostKu — Kost Modern di Jakarta",
-      description:
-        "Temukan kost modern di Jakarta dengan fasilitas lengkap, lokasi strategis, keamanan 24 jam, dan harga terjangkau. Booking sekarang!",
-      images,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "KostKu — Kost Modern di Jakarta",
-      description:
-        "Temukan kost modern di Jakarta dengan fasilitas lengkap, lokasi strategis, keamanan 24 jam, dan harga terjangkau. Booking sekarang!",
-    },
+    title,
+    description,
+    openGraph: { title, description, images },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
 async function getJsonLdData() {
-  let settings: SiteSetting[] = [];
+  const settings = await getSiteSettings();
   let testimonials: Testimonial[] = [];
 
   try {
     const supabase = await createClient();
-
-    const [settingsRes, testimonialsRes] = await Promise.all([
-      supabase.from("site_settings").select("key, value, updated_at"),
-      supabase
-        .from("testimonials")
-        .select("*")
-        .eq("is_visible", true),
-    ]);
-
-    if (settingsRes.data) settings = settingsRes.data;
-    if (testimonialsRes.data) testimonials = testimonialsRes.data;
+    const { data } = await supabase
+      .from("testimonials")
+      .select("*")
+      .eq("is_visible", true);
+    if (data) testimonials = data;
   } catch {
     // Use empty fallbacks
   }
@@ -80,7 +51,10 @@ async function getJsonLdData() {
 }
 
 export default async function Home() {
-  const jsonLd = await getJsonLdData();
+  const [jsonLd, settings] = await Promise.all([
+    getJsonLdData(),
+    getSiteSettings(),
+  ]);
 
   return (
     <main className="min-h-screen bg-surface-primary text-fg-primary">
@@ -88,14 +62,23 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Navbar />
+      <Navbar siteName={settings.site_name} logoUrl={settings.logo_url} />
       <Hero />
       <Facilities />
       <RoomTypes />
       <GalleryPreview />
       <Testimonials />
       <ContactCTA />
-      <Footer />
+      <Footer
+        siteName={settings.site_name}
+        logoUrl={settings.logo_url}
+        email={settings.email}
+        phone={settings.phone_number}
+        address={settings.address}
+        instagramUrl={settings.instagram_url}
+        facebookUrl={settings.facebook_url}
+        tiktokUrl={settings.tiktok_url}
+      />
     </main>
   );
 }

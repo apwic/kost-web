@@ -3,7 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import type { Testimonial } from "@/lib/types";
 import TestimonialForm from "@/components/admin/TestimonialForm";
 
-export const metadata = { title: "Edit Testimoni - Admin KostKu" };
+export const metadata = { title: "Edit Testimoni" };
 
 export default async function EditTestimonialPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;

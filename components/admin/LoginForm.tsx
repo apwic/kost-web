@@ -48,7 +48,7 @@ export function LoginForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="w-full rounded-lg border border-fg-muted/30 bg-surface-primary px-3 py-2 text-fg-primary placeholder:text-fg-muted focus:outline-none focus:ring-2 focus:ring-accent-primary/50"
-          placeholder="admin@kostku.com"
+          placeholder="admin@example.com"
         />
       </div>
 
